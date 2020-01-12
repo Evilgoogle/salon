@@ -176,6 +176,15 @@
                 <a href="#" class="all_services"><span>Узнать все услуги</span></a>
             </div>
         </section>
+        <section class="section_order">
+            <div class="contain">
+                <div class="left">
+                    <div class="title">Хотите окунуться в омут наслаждения?</div>
+                    <div class="mini">Проведите у нас свое время!</div>
+                </div>
+                <button class="js_order"><span>Оставить заявку</span></button>
+            </div>
+        </section>
     </div>
 
 @stop

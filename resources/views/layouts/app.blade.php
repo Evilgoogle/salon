@@ -54,6 +54,27 @@
     @yield('app_content')
 </main>
 
+<footer>
+    <div class="main_title">
+        <div class="text">Контакты</div>
+    </div>
+    <div class="contain">
+        <div class="left">
+            <div class="block">
+                <strong>Работаем круглосуточно 24/7</strong>
+                <p>
+                    <a href="tel:55" class="phone">+7 705 454 88 47</a>
+                    <a href="tel:55" class="phone">+7 771 847 88 04</a>
+                </p>
+            </div>
+        </div>
+        <div class="right">
+            <address>Алматы, ул. Сагадат<br> Нурмагамбетова, 426</address>
+            <div id="map"></div>
+        </div>
+    </div>
+</footer>
+
 <div class="overlay" id="overlay"></div>
 
 <!-- FontAwesome -->
