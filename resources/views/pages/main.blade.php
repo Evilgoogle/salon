@@ -182,7 +182,7 @@
                     <div class="title">Хотите окунуться в омут наслаждения?</div>
                     <div class="mini">Проведите у нас свое время!</div>
                 </div>
-                <button class="js_order"><span>Оставить заявку</span></button>
+                <button class="js_order"><span>Оставьте заявку</span></button>
             </div>
         </section>
     </div>

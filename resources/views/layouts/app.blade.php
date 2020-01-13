@@ -66,6 +66,13 @@
                     <a href="tel:55" class="phone">+7 705 454 88 47</a>
                     <a href="tel:55" class="phone">+7 771 847 88 04</a>
                 </p>
+                <div class="soc">
+                    <a href="#" class="bn"><i class="fas fa-envelope"></i></a>
+                    <a href="#" class="bn"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="bn"><i class="fab fa-vk"></i></a>
+                    <a href="#" class="bn"><i class="fab fa-whatsapp-square"></i></a>
+                </div>
+                <button type="button" class="js_order"><span>Оставить заявку</span></button>
             </div>
         </div>
         <div class="right">

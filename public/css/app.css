@@ -3961,11 +3961,53 @@ footer .left .block .phone:visited {
   color: #FFFFFF;
 }
 
+footer .left .block strong {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+footer .left .block .soc {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 0;
+}
+
+footer .left .block .soc .bn i {
+  color: #b73c64;
+  font-size: 40px;
+}
+
+footer .left .block .js_order {
+  background-color: #242232;
+  -webkit-box-shadow: 0px 2px 66px 0px #b73c65;
+          box-shadow: 0px 2px 66px 0px #b73c65;
+}
+
 footer .right {
-  height: 50%;
+  width: 50%;
+  height: 85%;
+}
+
+footer .right address {
+  display: block;
+  font-size: 24px;
+  font-family: "Cinzel";
 }
 
 .section_404 img {
   width: 100%;
+}
+
+#map {
+  margin-top: 20px;
+  height: 100%;
+  background-color: #000000;
+  -webkit-box-shadow: 0px 2px 66px 0px #b73c65;
+          box-shadow: 0px 2px 66px 0px #b73c65;
 }
 

@@ -485,14 +485,47 @@ footer {
         margin-top: 5px;
         font-size: 30px;
       }
+      strong {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .soc {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0;
+        .bn {
+          i {
+            color: $color-red;
+            font-size: 40px;
+          }
+        }
+      }
+      .js_order {
+        background-color: $color-blue;
+        box-shadow: $box_shadow;
+      }
     }
   }
   .right {
-    height: 50%;
+    width: 50%;
+    height: 85%;
+    address {
+     display: block;
+      font-size: 24px;
+      font-family: $font-Cinzel;
+    }
   }
 }
 .section_404 {
   img {
     width: 100%;
   }
+}
+
+#map {
+  margin-top: 20px;
+  height: 100%;
+  background-color: $color-black;
+  box-shadow: $box_shadow;
 }
