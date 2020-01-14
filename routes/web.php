@@ -170,4 +170,5 @@ Route::group(['middleware' => 'web'], function () {
 
     // website
     Route::get('', 'MainController@index');
+    Route::get('services', 'MainController@services');
 });

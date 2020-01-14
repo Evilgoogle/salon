@@ -126,17 +126,9 @@ class MainController extends Controller
         return view('pages.main', compact(''));
     }
 
-    public function contacts() {
+    public function services() {
 
-        $contacts = App\Contact::find(1);
-        return view('pages.contacts', compact('contacts'));
-    }
-
-    public function download(Request $request) {
-
-        $data = json_decode($request->data);
-        downloadZip($data, $request->title);
-        return back();
+        return view('pages.services', compact(''));
     }
 
     // Sitemaps

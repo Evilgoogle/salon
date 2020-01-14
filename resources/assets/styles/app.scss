@@ -91,6 +91,109 @@ body {
 .page_padding {
   padding-top: 95px;
 }
+.section_services {
+  @include img_cover("../images/services.jpg");
+  padding: 5vw 0 3vw;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $color-black;
+    opacity: 0.2;
+    @include position_abs;
+  }
+  .box {
+    position: relative;
+    z-index: 1;
+    .block {
+      display: flex;
+      flex-wrap: wrap;
+      width: 80%;
+      margin: 6vw auto 0;
+      .bn {
+        width: 50%;
+        display: flex;
+        margin-bottom: 140px;
+        .icon {
+          width: 40%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          .ico {
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            left: -50px;
+            bottom: -50px;
+            z-index: 1;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: $color-blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.8;
+            i {
+              color: $color-red;
+              font-size: 80px;
+            }
+          }
+          .image {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(to right, rgba(183,60,101,1) 0%, rgba(183,60,101,0.39) 100%);
+            overflow: hidden;
+            box-shadow: 0px 2px 73px 0px rgba(36,34,50,0.93);
+            border: 1px solid$color-blue;
+            .insert {
+              @include set_cover;
+              height: 100%;
+              opacity: 0.6;
+            }
+          }
+        }
+        .texts {
+          width: 60%;
+          padding: 0 30px;
+          box-sizing: border-box;
+          h3 {
+            font-family: $font-Cinzel;
+            font-size: 30px;
+          }
+          .desc {
+            margin-top: 30px;
+            font-size: 22px;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+    small {
+      font-size: 35px;
+      text-align: center;
+      display: block;
+    }
+    .all_services {
+      @include a_reset($color-white);
+      width: 400px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: $font-Cinzel;
+      color: $color-white;
+      background-color: $color-red;
+      margin: 50px auto;
+      font-size: 25px;
+    }
+  }
+}
+
 header {
   width: 100%;
   height: 95px;
@@ -343,108 +446,6 @@ header {
       }
     }
   }
-  .section_services {
-    @include img_cover("../images/services.jpg");
-    padding: 5vw 0 3vw;
-    position: relative;
-    &:before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: $color-black;
-      opacity: 0.2;
-      @include position_abs;
-    }
-    .box {
-      position: relative;
-      z-index: 1;
-      .block {
-        display: flex;
-        flex-wrap: wrap;
-        width: 80%;
-        margin: 6vw auto 0;
-        .bn {
-          width: 50%;
-          display: flex;
-          margin-bottom: 140px;
-          .icon {
-            width: 40%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            .ico {
-              width: 120px;
-              height: 120px;
-              position: absolute;
-              left: -50px;
-              bottom: -50px;
-              z-index: 1;
-              border-radius: 50%;
-              overflow: hidden;
-              background-color: $color-blue;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              opacity: 0.8;
-              i {
-                color: $color-red;
-                font-size: 80px;
-              }
-            }
-            .image {
-              position: absolute;
-              width: 300px;
-              height: 300px;
-              border-radius: 50%;
-              background: linear-gradient(to right, rgba(183,60,101,1) 0%, rgba(183,60,101,0.39) 100%);
-              overflow: hidden;
-              box-shadow: 0px 2px 73px 0px rgba(36,34,50,0.93);
-              border: 1px solid$color-blue;
-              .insert {
-                @include set_cover;
-                height: 100%;
-                opacity: 0.6;
-              }
-            }
-          }
-          .texts {
-            width: 60%;
-            padding: 0 30px;
-            box-sizing: border-box;
-            h3 {
-              font-family: $font-Cinzel;
-              font-size: 30px;
-            }
-            .desc {
-              margin-top: 30px;
-              font-size: 22px;
-              line-height: 1.5;
-            }
-          }
-        }
-      }
-      small {
-        font-size: 35px;
-        text-align: center;
-        display: block;
-      }
-      .all_services {
-        @include a_reset($color-white);
-        width: 400px;
-        height: 70px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: $font-Cinzel;
-        color: $color-white;
-        background-color: $color-red;
-        margin: 50px auto;
-        font-size: 25px;
-      }
-    }
-  }
   .section_order {
     height: 200px;
     background-color: $color-blue;
@@ -462,6 +463,20 @@ header {
       .mini {
         margin-top: 20px;
         font-size: 25px;
+      }
+    }
+  }
+}
+.page_services {
+  .section_services {
+    background-image: none;
+    .box {
+      .block {
+        .bn {
+          .texts {
+            padding: 0 40px;
+          }
+        }
       }
     }
   }

@@ -42,7 +42,7 @@
     <nav>
         <ul>
             <li><a href="#" class="active"><span>Главная</span></a></li>
-            <li><a href="#"><span>Виды массажа</span></a></li>
+            <li><a href="/services"><span>Виды массажа</span></a></li>
             <li><a href="#"><span>Галлерия</span></a></li>
             <li><a href="#"><span>О нас</span></a></li>
             <li><a href="#"><span>Контакты</span></a></li>
