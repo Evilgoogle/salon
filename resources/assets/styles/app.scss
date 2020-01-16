@@ -2,6 +2,7 @@
 @import "libs";
 @import "fonts";
 @import "animate";
+@import "~overlayscrollbars/css/overlayscrollbars";
 @import "node_modules/swiper/dist/css/swiper";
 @import "node_modules/sweetalert2/src/sweetalert2";
 
@@ -120,14 +121,13 @@ body {
           width: 40%;
           display: flex;
           justify-content: center;
-          align-items: center;
           position: relative;
           .ico {
             width: 120px;
             height: 120px;
             position: absolute;
             left: -50px;
-            bottom: -50px;
+            top: 200px;
             z-index: 1;
             border-radius: 50%;
             overflow: hidden;
@@ -159,16 +159,18 @@ body {
         }
         .texts {
           width: 60%;
-          padding: 0 30px;
+          padding: 0 40px;
           box-sizing: border-box;
           h3 {
             font-family: $font-Cinzel;
             font-size: 30px;
           }
           .desc {
+            height: 180px;
             margin-top: 30px;
             font-size: 22px;
             line-height: 1.5;
+            overflow: hidden;
           }
         }
       }
@@ -191,6 +193,9 @@ body {
       margin: 50px auto;
       font-size: 25px;
     }
+  }
+  .os-scrollbar-handle {
+    background: $color-red !important;
   }
 }
 
@@ -471,12 +476,11 @@ header {
   .section_services {
     background-image: none;
     .box {
-      .block {
-        .bn {
-          .texts {
-            padding: 0 40px;
-          }
-        }
+      small {
+        margin-top: 4vw;
+      }
+      .js_order {
+        margin: 40px auto 10px;
       }
     }
   }

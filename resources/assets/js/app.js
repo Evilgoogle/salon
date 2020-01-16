@@ -1,4 +1,5 @@
 require('./inputmask');
+require('overlayscrollbars');
 const Swal = require('sweetalert2');
 var Swiper = require('swiper/dist/js/swiper');
 
@@ -23,6 +24,8 @@ mql.addListener(function(m) {
 });*/
 
 $(document).ready(function () {
+
+    $('.section_services .block .bn .desc').overlayScrollbars({});
 
     // Main Swiper
     var swiper = new Swiper('.basic', {

@@ -72,6 +72,8 @@
                         </div>
                     @endforeach
                 </div>
+                <small>Понравилась какая нибудь из представленных услуг? Закажите эту услугу!</small>
+                <button type="button" class="js_order"><span>Заказать услугу</span></button>
             </div>
         </section>
     </div>
