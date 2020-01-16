@@ -169,7 +169,7 @@
                             </div>
                             <div class="texts">
                                 <h3>{{ $item->title }}</h3>
-                                <div id="doop{{ $i }}" class="desc"><div class="reed">{{ $item->desc }}</div></div>
+                                <div id="doop{{ $i }}" class="desc">{{ $item->desc }}</div>
                             </div>
                         </div>
                     @endforeach

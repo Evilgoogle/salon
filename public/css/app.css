@@ -4640,8 +4640,44 @@ header nav ul li .active:before {
   font-size: 25px;
 }
 
+.page_services .info_box {
+  height: 35vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(/images/footer.jpg?bc510466ac87c4124aae3f24a0958752) no-repeat center;
+  background-size: cover;
+}
+
+.page_services .info_box .main_title {
+  margin: 0;
+}
+
+.page_services .info_box .main_title:before {
+  display: none;
+}
+
+.page_services .info_box .main_title .text {
+  font-family: "Raleway-Regular";
+}
+
 .page_services .section_services {
   background-image: none;
+}
+
+.page_services .section_services .box .block .bn .image {
+  -webkit-box-shadow: 0 0 28px 0 #4a4a4a;
+          box-shadow: 0 0 28px 0 #4a4a4a;
+}
+
+.page_services .section_services .box .block .bn .image .insert {
+  opacity: 0.7;
 }
 
 .page_services .section_services .box small {

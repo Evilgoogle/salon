@@ -44,17 +44,21 @@
             'icon' => '<i class="far fa-heart"></i>',
             'image' => 'gal_4.jpg',
             'title' => 'Стандарт боди',
-            'desc' => 'Если вы хотите расслабиться и получить максимальное удовольствие не сравнимое ни с чем то это идеальный выбор!'
+            'desc' => 'Если вы хотите расслабиться и получить максимальное удовольствие не сравнимое ни с чем то это идеальный выбор! сли вы хотите расслабиться и получить максимальное удовольствие не сравнимое ни с чем то это идеальный выбор'
         ],
     ];
     ?>
 
     <div class="page_services">
-        <div class="info_box"></div>
+        <div class="info_box">
+            <div class="main_title">
+                <div class="text">Здесь представлены все услугу</div>
+            </div>
+        </div>
         <section class="section_services">
             <div class="box">
                 <div class="main_title">
-                    <div class="text">Виды услуг предостаяляемый нами</div>
+                    <div class="text">Все услуги</div>
                 </div>
                 <div class="block">
                     @foreach($services as $item)

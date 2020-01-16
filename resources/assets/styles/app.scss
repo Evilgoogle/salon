@@ -473,9 +473,35 @@ header {
   }
 }
 .page_services {
+  .info_box {
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include img_cover("../images/footer.jpg");
+    .main_title {
+      margin: 0;
+      &:before {
+        display: none;
+      }
+      .text {
+        font-family: $font-Raleway-Regular;
+      }
+    }
+  }
   .section_services {
     background-image: none;
     .box {
+      .block {
+        .bn {
+          .image {
+            box-shadow: 0 0 28px 0 #4a4a4a;;
+            .insert {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
       small {
         margin-top: 4vw;
       }
