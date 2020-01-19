@@ -80,8 +80,8 @@
             </div>
             <div class="contents">
                 <div class="header">
-                    <div class="company">LIDER</div>
-                    <h1>Боди массаж в Алматы</h1>
+                    <div class="company wow anm_fadeInTop" data-wow-duration="1s" data-wow-delay="0.5s">LIDER</div>
+                    <h1 class="wow anm_fadeInTDown" data-wow-duration="1s" data-wow-delay="0.5s">Боди массаж в Алматы</h1>
                 </div>
                 <div class="address">
                     <p>Боди — по своей сути, является эротическим массажем и разновидностью тайской методики</p>

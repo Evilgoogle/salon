@@ -1,112 +1,44 @@
-@keyframes moz_anm_main_slider_text {
-  0% {
-    transform: perspective(2000px) rotateY(0deg);
+@keyframes anm_fadeInTop {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
   }
-  25% {
-    transform: perspective(2000px) rotateY(6deg);
-  }
-  50% {
-    transform: perspective(2000px) rotateY(0deg);
-  }
-  75% {
-    transform: perspective(2000px) rotateY(-6deg);
-  }
-  100% {
-    transform: perspective(2000px) rotateY(0deg);
+
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
-@keyframes webkit_anm_main_slider_text {
-  0% {
-    transform: perspective(2000px) rotateY(0deg);
-  }
-  25% {
-    transform: perspective(2000px) rotateY(5deg);
-  }
-  50% {
-    transform: perspective(2000px) rotateY(0deg);
-  }
-  75% {
-    transform: perspective(2000px) rotateY(-5deg);
-  }
-  100% {
-    transform: perspective(2000px) rotateY(0deg);
-  }
+.anm_fadeInTop {
+  animation-name: anm_fadeInTop;
 }
 
-@keyframes moz_anm_main_slider_fon {
-  0% {
-    transform: perspective(2000px) rotateY(0deg) scale(1) translateZ(-20px);
+@keyframes anm_fadeInTDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
   }
-  50% {
-    transform: perspective(2000px) rotateY(20deg) scale(0.95) translateZ(-20px);
-  }
-  100% {
-    transform: perspective(2000px) rotateY(0deg) scale(1) translateZ(-20px);
+
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
-@keyframes webkit_anm_main_slider_fon {
-  0% {
-    transform: perspective(2000px) rotateY(0deg) scale(1) translate3d(-100px, 30px, -100px);
-  }
-  50% {
-    transform: perspective(2000px) rotateY(9deg) scale(0.95) translate3d(-100px, 30px, -100px);
-  }
-  100% {
-    transform: perspective(2000px) rotateY(0deg) scale(1) translate3d(-100px, 30px, -100px);
-  }
+.anm_fadeInTDown {
+  animation-name: anm_fadeInTDown;
 }
 
-@keyframes anm_main_slider_image {
-  0% {
-    transform:  translate(0px, 0px);
+@keyframes anm_fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-20px, 0, 0);
   }
-  50% {
-    transform: translate(-10px, 10px);
-  }
-  100% {
-    transform:  translate(0px, 0px);
-  }
-}
 
-// Main Swiper animations
-@keyframes anm_slide_right {
-  0% {
-    transform: translateX(70%) scale(0.7);
-  }
-  20% {
-    transform: translateX(0) scale(1);
-  }
-  30% {
-    transform: translateX(-20px) scale(1);
-  }
-  60% {
-    transform: translateX(10px) scale(1);
-  }
-  93% {
-    transform: translateX(3px) scale(1);
-  }
-  100% {
-    transform: translateX(0) scale(1);
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
-.anm_start_swmain {
-  transform: translateX(70%) scale(0.7);
-}
-.anm_end_swmain {
-  animation: anm_slide_right 2s linear;
-  transform: translateX(0%) scale(1);
-}
-//
-.anm_start_swmain_block {
-  transform: perspective(2000px) rotateY(-60deg) translateX(100%);
-}
-.anm_end_swmain_block {
-  transform: perspective(2000px) rotateY(0deg) translateX(0%);
-}
-//
-.anm_start_swmain_text {
-  opacity: 0;
-}
-.anm_end_swmain_text {
-  opacity: 1;
+.anm_fadeInLeft {
+  animation-name: anm_fadeInLeft;
 }

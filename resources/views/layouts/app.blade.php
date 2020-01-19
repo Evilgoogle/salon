@@ -34,12 +34,12 @@
 <header>
     <div class="header_block">
         <div class="contain">
-            <a href="/" class="logo">LIDER</a>
-            <button type="button" class="js_order"><span>Оставить заявку</span></button>
+            <a href="/" class="logo wow anm_fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">LIDER</a>
+            <button type="button" class="js_order wow anm_fadeInLeft" data-wow-duration="1s" data-wow-delay="0.8s"><span>Оставить заявку</span></button>
             <button class="mobile_menu"></button>
         </div>
     </div>
-    <nav>
+    <nav class="wow anm_fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
         <ul>
             <li><a href="/" class="active"><span>Главная</span></a></li>
             <li><a href="/services"><span>Виды услуг</span></a></li>
