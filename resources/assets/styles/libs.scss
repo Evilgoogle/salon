@@ -1,6 +1,6 @@
 // Colors
 $color-white: #FFFFFF;
-$color-black: #000000;
+$color-black: #15141e;
 $color-red: #b73c64;
 $color-blue: #242232;
 
@@ -404,7 +404,7 @@ $w-374: 374px;
   }
   em, i {
     font-family: $font-family !important;
-    color: #848484;
+    color: $color-white;
     font-style: normal;
   }
   p {
@@ -434,23 +434,24 @@ $w-374: 374px;
       list-style-type: none;
       position: relative;
       &:before {
-        content: "-";
-        width: 5px;
-        height: 5px;
-        color: $color-violet;
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $color-red;
         position: absolute;
-        left: -13px;
-        top: 2px;
+        left: -15px;
+        top: 6px;
       }
     }
   }
   a {
-    color: $color-violet !important;
+    color: $color-red !important;
     &:link {
-      color: $color-violet !important;
+      color: $color-red !important;
     }
     &:visited {
-      color: $color-violet !important;
+      color: $color-red !important;
     }
     text-decoration: underline !important;
   }

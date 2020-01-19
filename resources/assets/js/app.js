@@ -26,6 +26,7 @@ mql.addListener(function(m) {
 $(document).ready(function () {
 
     $('.section_services .block .bn .desc').overlayScrollbars({});
+    $('.page_articles .block .bn .text').overlayScrollbars({});
 
     // Main Swiper
     var swiper = new Swiper('.basic', {
@@ -49,6 +50,10 @@ $(document).ready(function () {
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
     });
+    galleryThumbs.on('slideChange', function (e) {
+        console.log(e);
+    });
+
     var galleryTop = new Swiper('.gallery-top', {
         spaceBetween: 10,
         navigation: {

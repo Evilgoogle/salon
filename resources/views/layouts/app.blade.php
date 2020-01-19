@@ -41,11 +41,10 @@
     </div>
     <nav>
         <ul>
-            <li><a href="#" class="active"><span>Главная</span></a></li>
-            <li><a href="/services"><span>Виды массажа</span></a></li>
-            <li><a href="#"><span>Галлерия</span></a></li>
-            <li><a href="#"><span>О нас</span></a></li>
-            <li><a href="#"><span>Контакты</span></a></li>
+            <li><a href="/" class="active"><span>Главная</span></a></li>
+            <li><a href="/services"><span>Виды услуг</span></a></li>
+            <li><a href="/articles"><span>Статьи</span></a></li>
+            <li><a href="/foto-gallary"><span>Фото девушек</span></a></li>
         </ul>
     </nav>
 </header>

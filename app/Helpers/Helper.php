@@ -152,8 +152,8 @@ if(!function_exists('issetImg')) {
      */
     function issetImg($img = null) {
         if(isset($img)) {
-            if(file_exists('files/'.$img)) {
-                return asset('files/'.preg_replace('#\s#ui', '%20', $img));
+            if(file_exists('temp/'.$img)) {
+                return asset('temp/'.preg_replace('#\s#ui', '%20', $img));
                 //return asset('files/'.$img);
             } else {
                 return asset('images/default.jpg');
@@ -289,5 +289,34 @@ if(!function_exists('downloadZip')) {
                 unlink($zip_name);
             }
         }
+    }
+}
+
+if (!function_exists('getDateShort')) {
+
+    /**
+     * @param $date
+     * @return bool|string
+     */
+    function getDateShort($date) {
+        $arr_month = [
+            '01' => 'Янв',
+            '02' => 'Феб',
+            '03' => 'Мар',
+            '04' => 'Апр',
+            '05' => 'Маи',
+            '06' => 'Июнь',
+            '07' => 'Июль',
+            '08' => 'Авг',
+            '09' => 'Сен',
+            '10' => 'Окт',
+            '11' => 'Ноя',
+            '12' => 'Дек'
+        ];
+
+        $month = date('m', strtotime($date));
+        $format = date('d '.$arr_month[$month].', y год', strtotime($date));
+
+        return $format;
     }
 }

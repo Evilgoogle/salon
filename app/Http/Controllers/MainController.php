@@ -131,6 +131,21 @@ class MainController extends Controller
         return view('pages.services', compact(''));
     }
 
+    public function articles($url = null) {
+
+
+        if($url !== null) {
+            return view('pages.articles.show', compact(''));
+        }
+
+        return view('pages.articles.index', compact(''));
+    }
+
+    public function foto_gallary() {
+
+        return view('pages.gallary', compact(''));
+    }
+
     // Sitemaps
     public function sitemap() {
         $last_news_time = $this->last_news_time();
