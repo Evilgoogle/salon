@@ -400,6 +400,31 @@ template {
   font-style: normal;
 }
 
+@-webkit-keyframes anm_fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes anm_fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.anm_fadeIn {
+  -webkit-animation-name: anm_fadeIn;
+          animation-name: anm_fadeIn;
+}
+
 @-webkit-keyframes anm_fadeInTop {
   from {
     opacity: 0;
@@ -433,7 +458,7 @@ template {
           animation-name: anm_fadeInTop;
 }
 
-@-webkit-keyframes anm_fadeInTDown {
+@-webkit-keyframes anm_fadeInDown {
   from {
     opacity: 0;
     -webkit-transform: translate3d(0, 20px, 0);
@@ -447,7 +472,7 @@ template {
   }
 }
 
-@keyframes anm_fadeInTDown {
+@keyframes anm_fadeInDown {
   from {
     opacity: 0;
     -webkit-transform: translate3d(0, 20px, 0);
@@ -461,9 +486,9 @@ template {
   }
 }
 
-.anm_fadeInTDown {
-  -webkit-animation-name: anm_fadeInTDown;
-          animation-name: anm_fadeInTDown;
+.anm_fadeInDown {
+  -webkit-animation-name: anm_fadeInDown;
+          animation-name: anm_fadeInDown;
 }
 
 @-webkit-keyframes anm_fadeInLeft {
@@ -497,6 +522,39 @@ template {
 .anm_fadeInLeft {
   -webkit-animation-name: anm_fadeInLeft;
           animation-name: anm_fadeInLeft;
+}
+
+@-webkit-keyframes anm_fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(20px, 0, 0);
+            transform: translate3d(20px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes anm_fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(20px, 0, 0);
+            transform: translate3d(20px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.anm_fadeInRight {
+  -webkit-animation-name: anm_fadeInRight;
+          animation-name: anm_fadeInRight;
 }
 
 /*!

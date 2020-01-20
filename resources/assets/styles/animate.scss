@@ -1,3 +1,16 @@
+@keyframes anm_fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.anm_fadeIn {
+  animation-name: anm_fadeIn;
+}
+
 @keyframes anm_fadeInTop {
   from {
     opacity: 0;
@@ -13,7 +26,7 @@
   animation-name: anm_fadeInTop;
 }
 
-@keyframes anm_fadeInTDown {
+@keyframes anm_fadeInDown {
   from {
     opacity: 0;
     transform: translate3d(0, 20px, 0);
@@ -24,8 +37,8 @@
     transform: none;
   }
 }
-.anm_fadeInTDown {
-  animation-name: anm_fadeInTDown;
+.anm_fadeInDown {
+  animation-name: anm_fadeInDown;
 }
 
 @keyframes anm_fadeInLeft {
@@ -41,4 +54,19 @@
 }
 .anm_fadeInLeft {
   animation-name: anm_fadeInLeft;
+}
+
+@keyframes anm_fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(20px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.anm_fadeInRight {
+  animation-name: anm_fadeInRight;
 }

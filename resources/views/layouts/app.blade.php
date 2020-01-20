@@ -34,12 +34,12 @@
 <header>
     <div class="header_block">
         <div class="contain">
-            <a href="/" class="logo wow anm_fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">LIDER</a>
-            <button type="button" class="js_order wow anm_fadeInLeft" data-wow-duration="1s" data-wow-delay="0.8s"><span>Оставить заявку</span></button>
+            <a href="/" class="logo">LIDER</a>
+            <button type="button" class="js_order"><span>Оставить заявку</span></button>
             <button class="mobile_menu"></button>
         </div>
     </div>
-    <nav class="wow anm_fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+    <nav>
         <ul>
             <li><a href="/" class="active"><span>Главная</span></a></li>
             <li><a href="/services"><span>Виды услуг</span></a></li>
@@ -54,24 +54,24 @@
 </main>
 
 <footer>
-    <div class="main_title">
+    <div class="main_title wow anm_fadeInTop" data-wow-duration="1.1s" data-wow-delay="0.5s">
         <div class="text">Контакты</div>
     </div>
     <div class="contain">
         <div class="left">
             <div class="block">
-                <strong>Работаем круглосуточно 24/7</strong>
-                <p>
+                <strong class="wow anm_fadeInDown" data-wow-duration="1.2s" data-wow-delay="0.7s">Работаем круглосуточно 24/7</strong>
+                <p class="wow anm_fadeInDown" data-wow-duration="1.2s" data-wow-delay="0.7s">
                     <a href="tel:55" class="phone">+7 705 454 88 47</a>
                     <a href="tel:55" class="phone">+7 771 847 88 04</a>
                 </p>
-                <div class="soc">
+                <div class="soc wow anm_fadeInDown" data-wow-duration="1.2s" data-wow-delay="0.7s">
                     <a href="#" class="bn"><i class="fas fa-envelope"></i></a>
                     <a href="#" class="bn"><i class="fab fa-instagram"></i></a>
                     <a href="#" class="bn"><i class="fab fa-vk"></i></a>
                     <a href="#" class="bn"><i class="fab fa-whatsapp-square"></i></a>
                 </div>
-                <button type="button" class="js_order"><span>Оставить заявку</span></button>
+                <button type="button" class="js_order wow anm_fadeInDown" data-wow-duration="1.2s" data-wow-delay="0.5s"><span>Оставить заявку</span></button>
             </div>
         </div>
         <div class="right">
