@@ -80,39 +80,27 @@ class MainController extends Controller
         return back()->with('status', 'Вы отписаны от рассылки');
     }
 
-    public function request(Request $request)
-    {
+    public function requests_k(Request $request) {
+
         $rules = [
             'name' => 'required',
+            'email' => 'required',
             'phone' => 'required',
-            'email' => 'email|required',
-            //'captcha' => 'required|captcha',
         ];
 
-        $messages = [
-            'name' => 'Не заполенна имя',
-            'phone' => 'Не заполнен телефон',
-            'email' => 'Не правильно набран E-mail',
-        ];
+        $v = Validator::make($request->all(), $rules);
 
-        $v = Validator::make($request->all(), $rules, $messages);
         if ($v->fails()) return response()->json($v->errors(), 422);
 
-        $data = $request->all();
-        $set = new App\ClientRequest();
-        $set->name = $request->name;
-        $set->email = $request->email;
-        $set->phone = $request->phone;
-        $set->message = $request->message;
-        $set->save();
+        /*$comment = new App\Requests();
+        $comment->item_id = $request->good_id;
+        $comment->name = $request->name;
+        $comment->email = $request->email;
+        $comment->phone = $request->phone;
+        $comment->text = $request->text;
+        $comment->save();*/
 
-        Mail::send('email.request', ['data' => $data], function($message) {
-            $message->from('emotions-mailgun@yandex.kz', 'Asken | Заявка');
-            $message->subject('Asken | Заявка');
-            $message->to('sales@askentd.kz');
-        });
-
-        return response()->json(['status' => 'ok', 'message' => 'Заявка принята. Ждите нашего звонка!']);
+        return response()->json('ok');
     }
 
     /*

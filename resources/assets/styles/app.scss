@@ -82,6 +82,320 @@ h1, h2, h3, h4 {
     }
   }
 }
+
+.modal_block {
+  display: flex;
+  justify-content: center;
+  .modal {
+    width: 60%;
+    height: auto;
+    overflow: auto;
+    position: fixed;
+    top: 15%;
+    bottom: 10%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 120;
+    transition: 0.4s ease;
+    transform: perspective(1000px) translateY(-100px);
+    @include respond-to(w-1439) {
+      bottom: 7%;
+    }
+    .flipper {
+      height: auto;
+      transition: all 1s ease-in-out;
+      transform-style: preserve-3d;
+      transform: rotateY(0deg);
+      background-color: $color-red;
+      position: relative;
+      .front {
+        transform: rotateY(0deg);
+        padding: 3% 0;
+        backface-visibility: hidden;
+        @include respond-to(w-1919) {
+          padding: 6% 0;
+        }
+        @include respond-to(w-1439) {
+          padding: 5% 0;
+        }
+        .flex {
+          display: flex;
+          justify-content: space-between;
+          .f {
+            width: calc(50% - 20px);
+          }
+        }
+        form {
+          width: 70%;
+          display: block;
+          margin: auto;
+          label {
+            width: 100%;
+            display: block;
+            margin-bottom: 30px;
+            @include respond-to(w-1439) {
+              margin-bottom: 20px;
+            }
+            @include respond-to(w-1023) {
+              margin-bottom: 13px;
+            }
+            small {
+              font-family: $font-Cinzel;
+              font-size: 21px;
+              display: block;
+              margin-bottom: 10px;
+              color: $color-white;
+              @include respond-to(w-1919) {
+                font-size: 20px;
+                margin-bottom: 8px;
+              }
+              @include respond-to(w-1439) {
+                font-size: 18px;
+                margin-bottom: 6px;
+              }
+            }
+            input {
+              width: 100%;
+              height: 60px;
+              padding: 0 10px;
+              display: block;
+              font-size: 26px;
+              font-family: $font-Raleway-Regular;
+              box-sizing: border-box;
+              @include respond-to(w-1919) {
+                height: 50px;
+                font-size: 22px;
+              }
+              @include respond-to(w-1439) {
+                height: 40px;
+                font-size: 20px;
+              }
+            }
+            textarea {
+              width: 100%;
+              height: 200px;
+              resize: none;
+              padding: 5px 10px;
+              box-sizing: border-box;
+              font-size: 26px;
+              font-family: $font-Raleway-Regular;
+              @include respond-to(w-1919) {
+                font-size: 22px;
+              }
+              @include respond-to(w-1439) {
+                font-size: 20px;
+              }
+            }
+          }
+          .flex {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            @include respond-to(w-1919) {
+              margin-top: 45px;
+            }
+            @include respond-to(w-1279) {
+              margin-top: 40px;
+            }
+            @include respond-to(w-1023) {
+              flex-direction: column;
+              margin-top: 35px;
+            }
+            .radio {
+              width: calc(50% - 16px);
+              height: 80px;
+              border: 2px solid$color-black;
+              transition: $animation_easy;
+              font-family: $font-Raleway-Regular;
+              font-size: 26px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+              @include respond-to(w-1919) {
+                height: 60px;
+                font-size: 24px;
+              }
+              @include respond-to(w-1599) {
+                font-size: 20px;
+              }
+              @include respond-to(w-1439) {
+                height: 50px;
+              }
+              @include respond-to(w-1023) {
+                width: 100%;
+              }
+              svg {
+                @include respond-to(w-1919) {
+                  height: 60%;
+                }
+                path {
+                  fill: $color-black;
+                }
+              }
+              span {
+                pointer-events: none;
+                margin-left: 20px;
+              }
+              input {
+                display: none;
+              }
+            }
+            .active {
+              background-color: $color-black;
+              color: $color-white;
+              svg {
+                path {
+                  fill: $color-white;
+                }
+              }
+            }
+          }
+          .js_modal_delivery {
+            display: none;
+          }
+          .button {
+            @include button_reset;
+            width: 380px;
+            height: 75px;
+            background-color: $color-blue;
+            color: $color-white;
+            font-family: $font-Raleway-Regular;
+            font-size: 30px;
+            margin: 30px auto 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include respond-to(w-1919) {
+              height: 57px;
+              margin: 20px auto 0;
+            }
+            @include respond-to(w-1279) {
+              width: 320px;
+              height: 50px;
+            }
+            @include respond-to(w-1023) {
+              width: 100%;
+            }
+            span {
+              @include respond-to(w-1599) {
+                font-size: 25px;
+              }
+              @include respond-to(w-1279) {
+                font-size: 22px;
+              }
+            }
+            .loading_buy {
+              height: 27px;
+            }
+          }
+        }
+      }
+      .back {
+        width: 100%;
+        height: 100%;
+        transform: rotateY(180deg);
+        @include position_abs;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .block {
+          width: 50%;
+          .icon {
+            width: 104px;
+            height: 78px;
+            @include img_cover('../images/ico_favourite.svg');
+            margin: auto;
+            @include respond-to(w-1599) {
+              transform: scale(0.8);
+            }
+            @include respond-to(w-1279) {
+              transform: scale(0.6);
+            }
+          }
+          .title {
+            font-family: $font-Cinzel;
+            font-size: 30px;
+            text-align: center;
+            margin-top: 12px;
+            @include respond-to(w-1599) {
+              font-size: 28px;
+            }
+            @include respond-to(w-1279) {
+              font-size: 22px;
+              margin-top: 8px;
+            }
+          }
+          .desc {
+            font-family: $font-Raleway-Regular;
+            font-size: 26px;
+            text-align: center;
+            margin-top: 15px;
+            @include respond-to(w-1599) {
+              font-size: 22px;
+            }
+            @include respond-to(w-1279) {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      .js_modal_cose {
+        @include button_reset;
+        width: 60px;
+        height: 60px;
+        @include img_cover("../images/close_modal.svg");
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        @include respond-to(w-1919) {
+          width: 40px;
+          height: 40px;
+        }
+        @include respond-to(w-1599) {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+    .success {
+      transform: perspective(2000px) rotateY(180deg) scale(0.7);
+    }
+  }
+  .modal_active {
+    visibility: visible;
+    opacity: 1;
+    transform: perspective(1000px) translateY(0px);
+  }
+}
+.overlay {
+  z-index: 10;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  filter: alpha(opacity=50);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.loading_buy {
+  width: 150px;
+  height: 39px;
+  margin: 2px auto 3px;
+  background: url("../images/loading.gif") no-repeat center;
+  background-size: contain;
+  display: block;
+}
+
 /* website */
 body {
   background-color: $color-blue;

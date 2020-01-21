@@ -5,9 +5,9 @@
     <div class="page_showartiles page_padding">
         <div class="contain">
             <div class="main_title">
-                <h1 class="text">On-Site Health Clinic vs. On-Site Corporate Spa: What</h1>
+                <h1 class="text wow anm_fadeInDown" data-wow-duration="1.2s" data-wow-delay="0.5s">On-Site Health Clinic vs. On-Site Corporate Spa: What</h1>
             </div>
-            <div class="editor">
+            <div class="editor wow anm_fadeInTop" data-wow-duration="1.2s" data-wow-delay="0.5s">
                 <p>Боди массаж в Алматы предлагают во многих салонах, а так же частные массажистки. Где действительно получить настоящий боди массаж в Алматы, мы расскажем в этой статье.</p>
                 <p>В первую очередь важнейшим фактором перед выбором куда пойти, стоит безопасность и конфиденциальность. Безопасность не только в том смысле, что могут напасть бандиты или полицейские, а не заразитесь ли вы какой-нибудь болезнью. Прикосновение двух тел всегда несет какую то опасность, тем более к половым органам.</p>
                 <p>

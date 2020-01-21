@@ -173,4 +173,5 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('services', 'MainController@services');
     Route::get('articles/{url?}', 'MainController@articles');
     Route::get('foto-gallary', 'MainController@foto_gallary');
+    Route::post('requests-k', 'MainController@requests_k');
 });

@@ -81,6 +81,45 @@
     </div>
 </footer>
 
+<div id="modal_reviews" class="modal_block">
+    <div class="modal">
+        <div class="flipper">
+            <div class="front">
+                <form id="js_form_reviews">
+                    <input type="hidden" name="good_id" class="js_good_id_review">
+                    <button type="button" class="js_modal_cose"></button>
+                    <div class="flex">
+                        <label class="f">
+                            <small>Ваше имя*</small>
+                            <input type="text" name="name">
+                        </label>
+                        <label class="f">
+                            <small>Ваша номер*</small>
+                            <input type="text" class="phone" name="phone">
+                        </label>
+                    </div>
+                    <label>
+                        <small>Ваша почта*</small>
+                        <input type="text" name="email">
+                    </label>
+                    <label>
+                        <small>Комментарий</small>
+                        <textarea name="text"></textarea>
+                    </label>
+                    <button type="submit" class="button button_review"><span>Написать</span></button>
+                </form>
+            </div>
+            <div class="back">
+                <button class="js_modal_cose"></button>
+                <div class="block">
+                    <div class="icon"></div>
+                    <div class="title">Спасибо</div>
+                    <div class="desc">Ваша заявка принята. Мы свяжемся с вами в течений дня!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="overlay" id="overlay"></div>
 
 <!-- FontAwesome -->

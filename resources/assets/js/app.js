@@ -100,62 +100,111 @@ $(document).ready(function () {
         }
     }
 
+    // Modal
+    $('.js_order').click(function() {
+
+        $('#modal_reviews .modal').addClass('modal_active');
+        $('#overlay').addClass('active');
+    });
     $('.js_modal_cose').click(function () {
 
-        $('#modal_buy .modal').removeClass('modal_active');
-        $('#modal_buy .modal .flipper').removeClass('success');
-
+        $('.modal_block .flipper').removeClass('success');
         $('#modal_reviews .modal').removeClass('modal_active');
-
         $('#overlay').removeClass('active');
     });
     $('#overlay').click(function () {
 
-        $('#modal_buy .modal').removeClass('modal_active');
-        $('#modal_buy .modal .flipper').removeClass('success');
-
         $('#modal_reviews .modal').removeClass('modal_active');
-
         $('#overlay').removeClass('active');
     });
+    //
+    var requestForm_reviews = $("#js_form_reviews");
+    requestForm_reviews.submit(function(e) {
 
-    var request = $('#request');
-    request.submit(function(e){
         e.preventDefault();
-        var formData = request.serialize();
-        $.ajax({
-            url: '/request',
-            type: 'POST',
-            data: formData,
-            dataType: 'json',
-            headers: {
-                'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-            },
-            success: function(data){
-                if (data.status == 'ok') {
-                    Swal.fire({
-                        title: 'Спасибо',
-                        html: 'Заявка принято. Ждите нашего звонка!',
-                        type: 'success',
-                        confirmButtonText: 'Закрыть'
-                    });
-                    $("input", request).val('');
+        var loader = $('.modal_block .button_review');
+
+        // проверка формы
+        var ajax_init_re = true;
+        var name = $('#modal_reviews [name="name"]').val();
+        var email = $('#modal_reviews [name="email"]').val();
+        var phone = $('#modal_reviews [name="phone"]').val();
+        var text = $('#modal_reviews [name="text"]').val();
+
+        if(name == '') {
+            ajax_init_re = false;
+            Swal.fire({
+                title: 'Ошибка!',
+                html: 'Имя не заполнена',
+                type: 'error',
+                confirmButtonText: 'Закрыть'
+            });
+        }
+        if(email == '') {
+            ajax_init_re = false;
+            Swal.fire({
+                title: 'Ошибка!',
+                html: 'Почта не заполнен',
+                type: 'error',
+                confirmButtonText: 'Закрыть'
+            });
+        }
+        if(phone == '') {
+            ajax_init_re = false;
+            Swal.fire({
+                title: 'Ошибка!',
+                html: 'Телефон не заполнен',
+                type: 'error',
+                confirmButtonText: 'Закрыть'
+            });
+        }
+
+        if(ajax_init_re) {
+            requestForm_reviews = $(this);
+            var formData_re = requestForm_reviews.serialize();
+            $.ajax({
+                url: '/requests-k',
+                type: 'POST',
+                data: formData_re,
+                dataType: 'json',
+                headers: {
+                    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+                },
+                // выполнить до отправки запроса
+                beforeSend: function() {
+                    loader.attr('disabled', '');
+                    loader.html('<span class="loading_buy"></span>');
+                },
+                success: function(data){
+
+                    if(data == 'ok') {
+                        $('.modal_block .flipper').addClass('success');
+                    }
+                    loader.removeAttr('disabled')
+                    loader.html('<span>Написать</span>');
+                },
+                error: function (data) {
+                    if(data.status == '422') {
+                        console.log(data);
+                        var alert = JSON.parse(data.responseText)
+                        var errors = [];
+                        for(var a in alert) {
+                            errors.push(alert[a][0]);
+                        }
+
+                        loader.removeAttr('disabled')
+                        loader.html('<span>Написать</span>');
+
+                        Swal.fire({
+                            title: 'Ошибка!',
+                            html: errors.join('<br>'),
+                            type: 'error',
+                            confirmButtonText: 'Закрыть'
+                        })
+                    }
                 }
-            },
-            error: function (data) {
-                var alert = data.responseJSON;
-                var errors = [];
-                for(var a in alert) {
-                    errors.push(alert[a][0]);
-                }
-                Swal.fire({
-                    title: 'Ошибка!',
-                    html: errors.join('<br>'),
-                    type: 'error',
-                    confirmButtonText: 'Закрыть'
-                });
-            }
-        });
+            });
+        }
     });
 
 });
