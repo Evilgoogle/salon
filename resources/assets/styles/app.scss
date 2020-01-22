@@ -12,6 +12,24 @@
   width: 100%;
   margin: auto;
   box-sizing: border-box;
+  @include respond-to(w-1919) {
+    max-width: 1420px;
+  }
+  @include respond-to(w-1599) {
+    max-width: 1240px;
+  }
+  @include respond-to(w-1366) {
+    max-width: 1190px;
+  }
+  @include respond-to(w-1280) {
+    max-width: 1120px;
+  }
+  @include respond-to(w-1279) {
+    max-width: 1000px;
+  }
+  @include respond-to(w-1199) {
+    max-width: 900px;
+  }
   @include respond-to(w-1023) {
     max-width: 100%;
     padding-left: 55px;
@@ -53,6 +71,9 @@ h1, h2, h3, h4 {
     font-size: 50px;
     margin-top: 3vw;
     text-align: center;
+    @include respond-to(w-1919) {
+      font-size: 44px;
+    }
   }
   small {
     text-align: center;
@@ -60,6 +81,10 @@ h1, h2, h3, h4 {
     margin: 20px auto;
     color: $color-red;
     font-size: 30px;
+    @include respond-to(w-1919) {
+      font-size: 27px;
+      margin: 17px auto;
+    }
   }
 }
 .ul_vantage {
@@ -402,6 +427,9 @@ body {
   color: $color-white;
   font-family: $font-Raleway-Regular;
   font-size: 20px;
+  @include respond-to(w-1599) {
+    font-size: 18px;
+  }
 }
 .page_padding {
   padding-top: 95px;
@@ -450,9 +478,17 @@ body {
             justify-content: center;
             align-items: center;
             opacity: 0.8;
+            @include respond-to(w-1919) {
+              width: 105px;
+              height: 105px;
+              top: 185px;
+            }
             i {
               color: $color-red;
               font-size: 80px;
+              @include respond-to(w-1919) {
+                font-size: 70px;
+              }
             }
           }
           .image {
@@ -464,6 +500,10 @@ body {
             overflow: hidden;
             box-shadow: 0px 2px 73px 0px rgba(36,34,50,0.93);
             border: 1px solid$color-blue;
+            @include respond-to(w-1919) {
+              width: 280px;
+              height: 280px;
+            }
             .insert {
               @include set_cover;
               height: 100%;
@@ -478,6 +518,9 @@ body {
           h3 {
             font-family: $font-Cinzel;
             font-size: 30px;
+            @include respond-to(w-1919) {
+              font-size: 27px;
+            }
           }
           .desc {
             height: 180px;
@@ -485,6 +528,22 @@ body {
             font-size: 22px;
             line-height: 1.5;
             overflow: hidden;
+            @include respond-to(w-1919) {
+              font-size: 20px
+            }
+          }
+          .price {
+            width: 80%;
+            height: 40px;
+            margin-top: 25px;
+            font-family: $font-Cinzel;
+            font-size: 26px;
+            background-color: #b73c64cc;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 0 10px;
+            border-radius: 5px;
           }
         }
       }
@@ -493,6 +552,9 @@ body {
       font-size: 35px;
       text-align: center;
       display: block;
+      @include respond-to(w-1919) {
+        font-size: 30px;
+      }
     }
     .all_services {
       @include a_reset($color-white);
@@ -506,6 +568,12 @@ body {
       background-color: $color-red;
       margin: 50px auto;
       font-size: 25px;
+      @include respond-to(w-1919) {
+        width: 320px;
+        height: 65px;
+        margin: 45px auto;
+        font-size: 23px;
+      }
     }
   }
 }
@@ -559,6 +627,9 @@ header {
           position: relative;
           display: flex;
           justify-content: center;
+          @include respond-to(w-1919) {
+            font-size: 20px;
+          }
         }
         .active {
           &:before {
@@ -698,6 +769,9 @@ header {
         h1 {
           margin-top: 20px;
           font-size: 40px;
+          @include respond-to(w-1919) {
+            font-size: 37px;
+          }
         }
       }
       .address {
@@ -749,6 +823,9 @@ header {
       font-size: 22px;
       position: relative;
       z-index: 1;
+      @include respond-to(w-1919) {
+        font-size: 20px;
+      }
       .video {
         width: 60%;
         margin: 3vw 0 0 3vw;
@@ -778,10 +855,16 @@ header {
       .title {
         font-weight: bold;
         font-size: 35px;
+        @include respond-to(w-1919) {
+          font-size: 30px;
+        }
       }
       .mini {
         margin-top: 20px;
         font-size: 25px;
+        @include respond-to(w-1919) {
+          font-size: 22px;
+        }
       }
     }
   }
@@ -968,10 +1051,16 @@ footer {
         display: block;
         margin-top: 5px;
         font-size: 30px;
+        @include respond-to(w-1919) {
+          font-size: 27px;
+        }
       }
       strong {
         font-size: 30px;
         font-weight: bold;
+        @include respond-to(w-1919) {
+          font-size: 27px;
+        }
       }
       .soc {
         width: 40%;
@@ -982,6 +1071,9 @@ footer {
           i {
             color: $color-red;
             font-size: 40px;
+            @include respond-to(w-1919) {
+              font-size: 37px;
+            }
           }
         }
       }
