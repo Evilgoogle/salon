@@ -18925,6 +18925,7 @@ $(document).ready(function () {
     });
     $('#overlay').click(function () {
 
+        $('.modal_block .flipper').removeClass('success');
         $('#modal_reviews .modal').removeClass('modal_active');
         $('#overlay').removeClass('active');
     });

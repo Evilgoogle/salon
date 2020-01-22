@@ -4382,8 +4382,8 @@ h4 {
 }
 
 .modal_block .modal .success {
-  -webkit-transform: perspective(2000px) rotateY(180deg) scale(0.7);
-          transform: perspective(2000px) rotateY(180deg) scale(0.7);
+  -webkit-transform: perspective(2000px) rotateY(180deg) scale(0.8);
+          transform: perspective(2000px) rotateY(180deg) scale(0.8);
 }
 
 .modal_block .modal_active {
