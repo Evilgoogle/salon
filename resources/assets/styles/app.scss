@@ -50,6 +50,10 @@
   font-family: $font-Cinzel;
   color: $color-white;
   background-color: $color-red;
+  @include respond-to(w-1366) {
+    width: 235px;
+    height: 45px;
+  }
 }
 h1, h2, h3, h4 {
   font-weight: normal;
@@ -73,6 +77,12 @@ h1, h2, h3, h4 {
     text-align: center;
     @include respond-to(w-1919) {
       font-size: 44px;
+    }
+    @include respond-to(w-1599) {
+      font-size: 38px;
+    }
+    @include respond-to(w-1366) {
+      font-size: 34px;
     }
   }
   small {
@@ -459,6 +469,9 @@ body {
         width: 50%;
         display: flex;
         margin-bottom: 140px;
+        @include respond-to(w-1366) {
+          margin-bottom: 90px;
+        }
         .icon {
           width: 40%;
           display: flex;
@@ -483,11 +496,28 @@ body {
               height: 105px;
               top: 185px;
             }
+            @include respond-to(w-1599) {
+              width: 90px;
+              height: 90px;
+              top: 180px;
+            }
+            @include respond-to(w-1366) {
+              width: 85px;
+              height: 85px;
+              top: 170px;
+              left: -40px;
+            }
             i {
               color: $color-red;
               font-size: 80px;
               @include respond-to(w-1919) {
                 font-size: 70px;
+              }
+              @include respond-to(w-1599) {
+                font-size: 60px;
+              }
+              @include respond-to(w-1366) {
+                font-size: 55px;
               }
             }
           }
@@ -504,6 +534,14 @@ body {
               width: 280px;
               height: 280px;
             }
+            @include respond-to(w-1599) {
+              width: 260px;
+              height: 260px;
+            }
+            @include respond-to(w-1366) {
+              width: 240px;
+              height: 240px;
+            }
             .insert {
               @include set_cover;
               height: 100%;
@@ -515,11 +553,23 @@ body {
           width: 60%;
           padding: 0 40px;
           box-sizing: border-box;
+          @include respond-to(w-1599) {
+            padding: 0 50px;
+          }
+          @include respond-to(w-1366) {
+            padding: 0 45px;
+          }
           h3 {
             font-family: $font-Cinzel;
             font-size: 30px;
             @include respond-to(w-1919) {
               font-size: 27px;
+            }
+            @include respond-to(w-1599) {
+              font-size: 26px;
+            }
+            @include respond-to(w-1366) {
+              font-size: 24px;
             }
           }
           .desc {
@@ -530,6 +580,14 @@ body {
             overflow: hidden;
             @include respond-to(w-1919) {
               font-size: 20px
+            }
+            @include respond-to(w-1599) {
+              line-height: 1.4;
+              height: 190px;
+              margin-top: 20px;
+            }
+            @include respond-to(w-1366) {
+              font-size: 19px;
             }
           }
           .price {
@@ -544,6 +602,13 @@ body {
             box-sizing: border-box;
             padding: 0 10px;
             border-radius: 5px;
+            @include respond-to(w-1599) {
+              font-size: 25px;
+            }
+            @include respond-to(w-1366) {
+              font-size: 23px;
+              height: 36px;
+            }
           }
         }
       }
@@ -554,6 +619,9 @@ body {
       display: block;
       @include respond-to(w-1919) {
         font-size: 30px;
+      }
+      @include respond-to(w-1366) {
+        font-size: 26px;
       }
     }
     .all_services {
@@ -574,6 +642,11 @@ body {
         margin: 45px auto;
         font-size: 23px;
       }
+      @include respond-to(w-1366) {
+        width: 320px;
+        height: 57px;
+        margin: 40px auto;
+      }
     }
   }
 }
@@ -588,6 +661,9 @@ header {
   top: 0;
   left: 0;
   z-index: 10;
+  @include respond-to(w-1366) {
+    height: 70px;
+  }
   .header_block {
     height: 100%;
     border-bottom: 1px solid$color-red;
@@ -603,6 +679,9 @@ header {
       font-family: $font-Cinzel;
       text-transform: uppercase;
       font-size: 50px;
+      @include respond-to(w-1366) {
+        font-size: 45px;
+      }
     }
     .mobile_menu {
       display: none;
@@ -612,6 +691,9 @@ header {
     font-family: $font-Cinzel;
     width: 80%;
     margin: -60px auto 0;
+    @include respond-to(w-1366) {
+      margin: -43px auto 0;
+    }
     ul {
       margin: 0;
       padding: 0;
@@ -629,6 +711,9 @@ header {
           justify-content: center;
           @include respond-to(w-1919) {
             font-size: 20px;
+          }
+          @include respond-to(w-1366) {
+            font-size: 18px;
           }
         }
         .active {
@@ -763,14 +848,23 @@ header {
         padding: 2vw 0 3vw;
         text-align: center;
         font-family: $font-Cinzel;
+        @include respond-to(w-1366) {
+          padding: 2vw 0 2.2vw;
+        }
         .company {
           font-size: 90px;
+          @include respond-to(w-1366) {
+            font-size: 80px;
+          }
         }
         h1 {
           margin-top: 20px;
           font-size: 40px;
           @include respond-to(w-1919) {
             font-size: 37px;
+          }
+          @include respond-to(w-1366) {
+            font-size: 30px;
           }
         }
       }
@@ -779,10 +873,16 @@ header {
         border-top: 3px solid$color-red;
         padding-top: 30px;
         text-align: center;
+        @include respond-to(w-1366) {
+          padding-top: 10px;
+        }
         .phone {
           @include a_reset($color-red);
           margin: 0 20px;
           font-size: 25px;
+          @include respond-to(w-1366) {
+            font-size: 22px;
+          }
         }
         .soc {
           width: 40%;
@@ -804,6 +904,9 @@ header {
     background-color: $color-blue;
     position: relative;
     overflow: hidden;
+    @include respond-to(w-1366) {
+      padding: 9vw 0;
+    }
     &:before {
       content: '';
       display: block;
@@ -826,6 +929,9 @@ header {
       @include respond-to(w-1919) {
         font-size: 20px;
       }
+      @include respond-to(w-1366) {
+        font-size: 19px;
+      }
       .video {
         width: 60%;
         margin: 3vw 0 0 3vw;
@@ -839,12 +945,18 @@ header {
       .ul_vantage {
         width: 80%;
         margin: 5vw auto 0;
+        @include respond-to(w-1366) {
+          width: 90%;
+        }
       }
     }
   }
   .section_order {
     height: 200px;
     background-color: $color-blue;
+    @include respond-to(w-1366) {
+      height: 180px;
+    }
     .contain {
       height: 100%;
       display: flex;
@@ -858,12 +970,19 @@ header {
         @include respond-to(w-1919) {
           font-size: 30px;
         }
+        @include respond-to(w-1366) {
+          font-size: 26px;
+        }
       }
       .mini {
         margin-top: 20px;
         font-size: 25px;
         @include respond-to(w-1919) {
           font-size: 22px;
+        }
+        @include respond-to(w-1366) {
+          font-size: 20px;
+          margin-top: 15px;
         }
       }
     }
@@ -1054,12 +1173,18 @@ footer {
         @include respond-to(w-1919) {
           font-size: 27px;
         }
+        @include respond-to(w-1366) {
+          font-size: 25px;
+        }
       }
       strong {
         font-size: 30px;
         font-weight: bold;
         @include respond-to(w-1919) {
           font-size: 27px;
+        }
+        @include respond-to(w-1366) {
+          font-size: 24px;
         }
       }
       .soc {
@@ -1090,6 +1215,9 @@ footer {
      display: block;
       font-size: 24px;
       font-family: $font-Cinzel;
+      @include respond-to(w-1366) {
+        font-size: 20px;
+      }
     }
   }
 }
@@ -1104,4 +1232,7 @@ footer {
   height: 100%;
   background-color: $color-black;
   box-shadow: $box_shadow;
+  @include respond-to(w-1366) {
+    height: 90%;
+  }
 }
