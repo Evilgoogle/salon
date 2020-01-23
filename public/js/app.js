@@ -18836,6 +18836,13 @@ mql.addListener(function(m) {
 
 $(document).ready(function () {
 
+    // Preloader
+    $('.preloader span').removeClass('preloader_span_active');
+    setTimeout(function () {
+        $('#modal_reviews').css('display', 'flex');
+        $('.preloader').removeClass('preloader_active');
+    }, 400);
+
     $('.section_services .block .bn .desc').overlayScrollbars({});
     $('.page_articles .block .bn .text').overlayScrollbars({});
 

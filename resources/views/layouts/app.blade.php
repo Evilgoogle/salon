@@ -31,6 +31,7 @@
 </head>
 <body>
 
+<div class="preloader preloader_active" style="height: 100vh; background-color: #2e354f"><span></span></div>
 <header>
     <div class="header_block">
         <div class="contain">
@@ -81,7 +82,7 @@
     </div>
 </footer>
 
-<div id="modal_reviews" class="modal_block">
+<div id="modal_reviews" class="modal_block" style="display: none">
     <div class="modal">
         <div class="flipper">
             <div class="front">
