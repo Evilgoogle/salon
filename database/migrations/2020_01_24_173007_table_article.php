@@ -17,6 +17,7 @@ class TableArticle extends Migration
             $table->increments('id');
             $table->boolean('enable')->default(1);
             $table->text('title')->nullable();
+            $table->text('url')->nullable();
             $table->string('image')->nullable();
             $table->text('desc')->nullable();
             $table->text('text')->nullable();

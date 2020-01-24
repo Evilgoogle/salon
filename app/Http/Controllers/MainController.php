@@ -111,22 +111,36 @@ class MainController extends Controller
 
     public function index() {
 
-        return view('pages.main', compact(''));
+        $services = App\Service::orderBy('position', 'ASC')->where('enable', 1)->take(4)->get();
+
+        return view('pages.main', compact('services'));
     }
 
     public function services() {
 
-        return view('pages.services', compact(''));
+        $services = App\Service::orderBy('position', 'ASC')->where('enable', 1)->get();
+
+        return view('pages.services', compact('services'));
     }
 
     public function articles($url = null) {
 
 
         if($url !== null) {
-            return view('pages.articles.show', compact(''));
+
+            $item = App\Article::where('url', $url)->first();
+
+            if(isset($item)) {
+
+                return view('pages.articles.show', compact('item'));
+            } else {
+                return abort('404');
+            }
         }
 
-        return view('pages.articles.index', compact(''));
+        $items = App\Article::orderBy('created_at', 'DESC')->where('enable', 1)->get();
+
+        return view('pages.articles.index', compact('items'));
     }
 
     public function foto_gallary() {

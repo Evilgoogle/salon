@@ -49,6 +49,13 @@
                              'item' => isset($item) ? $item : ''
                         ])
 
+                        @include('admin._input.input-text', [
+                            'name' => 'price',
+                            'label' => 'Цена',
+                            'item' => isset($item) ? $item : '',
+                            'required' => true
+                        ])
+
                         <div class="row clearfix">
                             <div class="col-sm-12">
                                 <button type="submit" class="btn bg-pink m-t-10 waves-effect">{{ isset($item) ? 'Обновить' : 'Записать' }}</button>

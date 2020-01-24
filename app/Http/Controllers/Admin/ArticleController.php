@@ -77,7 +77,7 @@ class ArticleController extends Controller
         if ($v->fails()) return back()->withErrors($v->errors())->withInput();
 
         $bool_exceptions = ['enable'];
-        $result = $this->crudClass->insert($this->info->modelName, $id ,$request, null, $bool_exceptions, null, null, false);
+        $result = $this->crudClass->insert($this->info->modelName, $id ,$request, null, $bool_exceptions, null, null, true);
 
         if ($result['status'] == 'ok')
             return redirect('/admin/'.$this->info->url)->with('message', 'Запись обновлена');

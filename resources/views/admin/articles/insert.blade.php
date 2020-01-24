@@ -28,6 +28,13 @@
                             'required' => true
                         ])
 
+                        @include('admin._input.input-text', [
+                            'name' => 'url',
+                            'label' => 'Url',
+                            'item' => isset($item) ? $item : '',
+                            'required' => true
+                        ])
+
                         @include('admin._input.input-filemanager', [
                             'name' => 'image',
                             'label' => 'Изображение',

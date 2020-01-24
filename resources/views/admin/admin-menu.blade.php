@@ -49,13 +49,13 @@
         </li>--}}
         <li>
             <a href="/admin/services">
-                <i class="material-icons">build</i>
+                <i class="material-icons">favorite</i>
                 <span>Услуги</span>
             </a>
         </li>
         <li>
             <a href="/admin/articles">
-                <i class="material-icons">business</i>
+                <i class="material-icons">content_copy</i>
                 <span>Статий</span>
             </a>
         </li>

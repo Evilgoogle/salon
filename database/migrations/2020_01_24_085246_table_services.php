@@ -21,7 +21,7 @@ class TableServices extends Migration
             $table->text('desc')->nullable();
             $table->string('icon')->nullable();
             $table->string('image')->nullable();
-            $table->string('price')->nullable();
+            $table->string('price')->default(0);
             $table->timestamps();
         });
     }

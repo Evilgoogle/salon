@@ -2,59 +2,6 @@
 
 @section('app_content')
 
-    <?php
-    $services = [
-        0 => (object)[
-            'id' => 1,
-            'icon' => '<i class="far fa-heart"></i>',
-            'image' => 'gal_1.jpg',
-            'title' => 'Экспресс боди',
-            'desc' => 'Если вы хотите расслабиться и получить максимальное удовольствие не сравнимое ни с чем то это идеальный выбор!',
-            'price' => 12000
-        ],
-        1 => (object)[
-            'id' => 1,
-            'icon' => '<i class="fas fa-house-damage"></i>',
-            'image' => 'gal_2.jpg',
-            'title' => 'Стандарт боди',
-            'desc' => 'Если вы хотите расслабиться и получить максимальное удовольствие не сравнимое ни с чем то это идеальный выбор!',
-            'price' => 12000
-        ],
-        2 => (object)[
-            'id' => 1,
-            'icon' => '<i class="far fa-eye"></i>',
-            'image' => 'gal_3.jpg',
-            'title' => 'Ветка сакуры',
-            'desc' => 'Если вы хотите расслабиться и получить максимальное удовольствие не сравнимое ни с чем то это идеальный выбор!',
-            'price' => 12000
-        ],
-        3 => (object)[
-            'id' => 1,
-            'icon' => '<i class="far fa-heart"></i>',
-            'image' => 'gal_4.jpg',
-            'title' => 'Стандарт боди',
-            'desc' => 'Если вы хотите расслабиться и получить максимальное удовольствие не сравнимое ни с чем то это идеальный выбор!',
-            'price' => 12000
-        ],
-        4 => (object)[
-            'id' => 1,
-            'icon' => '<i class="far fa-eye"></i>',
-            'image' => 'gal_3.jpg',
-            'title' => 'Ветка сакуры',
-            'desc' => 'Если вы хотите расслабиться и получить максимальное удовольствие не сравнимое ни с чем то это идеальный выбор!',
-            'price' => 12000
-        ],
-        5 => (object)[
-            'id' => 1,
-            'icon' => '<i class="far fa-heart"></i>',
-            'image' => 'gal_4.jpg',
-            'title' => 'Стандарт боди',
-            'desc' => 'Если вы хотите расслабиться и получить максимальное удовольствие не сравнимое ни с чем то это идеальный выбор! сли вы хотите расслабиться и получить максимальное удовольствие не сравнимое ни с чем то это идеальный выбор',
-            'price' => 12000
-        ],
-    ];
-    ?>
-
     <div class="page_services">
         <div class="info_box">
             <div class="main_title">
@@ -74,7 +21,7 @@
                             <div class="icon">
                                 <div class="ico">{!! $item->icon !!}</div>
                                 <div class="image">
-                                    <div class="insert" style="background-image: url('/temp/{{ $item->image }}')"></div>
+                                    <div class="insert" style="background-image: url('{{ issetImg($item->image) }}')"></div>
                                 </div>
                             </div>
                             <div class="texts wow anm_fadeInDown" data-wow-duration="1.4s" data-wow-delay="{{ $i/4 }}s">
