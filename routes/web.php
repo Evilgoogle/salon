@@ -107,43 +107,18 @@ Route::group(['middleware' => 'web'], function () {
        |--------------------------------------------------------------------------
        */
 
-        Route::group(['prefix' => 'products'], function () {
-            Route::get('', 'ProductController@index');
-            Route::get('add', 'ProductController@add');
-            Route::get('edit/{id}', 'ProductController@edit');
-            Route::post('insert/{id?}', 'ProductController@insert');
-            Route::post('change-position', 'ProductController@changePosition');
-        });
-
-        Route::group(['prefix' => 'catalog'], function () {
-            Route::get('', 'DocsController@index');
-            Route::get('filter', 'DocsController@filter');
-            Route::get('add', 'DocsController@add');
-            Route::get('edit/{id}', 'DocsController@edit');
-            Route::post('insert/{id?}', 'DocsController@insert');
-            Route::get('remove/{id}', 'DocsController@remove');
-            Route::post('remove-image', 'DocsController@removeImage');
-            Route::post('enable', 'DocsController@enable');
-        });
-
-        Route::group(['prefix' => 'industries'], function () {
-            Route::get('', 'IndustriesController@index');
-            Route::get('add', 'IndustriesController@add');
-            Route::get('edit/{id}', 'IndustriesController@edit');
-            Route::post('insert/{id?}', 'IndustriesController@insert');
-            Route::get('remove/{id}', 'IndustriesController@remove');
-            Route::post('change-position', 'IndustriesController@changePosition');
-            Route::post('enable', 'IndustriesController@enable');
+        Route::group(['prefix' => 'services'], function () {
+            Route::get('', 'ServicesController@index');
+            Route::get('add', 'ServicesController@add');
+            Route::get('edit/{id}', 'ServicesController@edit');
+            Route::post('insert/{id?}', 'ServicesController@insert');
+            Route::post('change-position', 'ServicesController@changePosition');
+            Route::post('enable', 'ServicesController@enable');
         });
 
         Route::group(['prefix' => 'contacts'], function () {
             Route::get('', 'ContactsController@index');
             Route::post('insert/{id}', 'ContactsController@insert');
-        });
-
-        Route::group(['prefix' => 'about'], function () {
-            Route::get('', 'AboutController@index');
-            Route::post('insert/{id}', 'AboutController@insert');
         });
 
         Route::group(['prefix' => 'requests'], function () {

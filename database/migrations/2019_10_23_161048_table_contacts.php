@@ -19,6 +19,9 @@ class TableContacts extends Migration
             $table->string('phone_2')->nullable();
             $table->text('adress')->nullable();
             $table->string('email')->nullable();
+            $table->string('insta')->nullable();
+            $table->string('vk')->nullable();
+            $table->string('whatsapp')->nullable();
             $table->text('lat')->nullable();
             $table->text('lng')->nullable();
             $table->timestamps();

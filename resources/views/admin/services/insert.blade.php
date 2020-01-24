@@ -21,17 +21,10 @@
                         ])
 
                         @include('admin._input.input-text', [
-                            'name' => 'ulr',
-                            'label' => 'URL',
-                            'item' => isset($item) ? $item : '',
-                        ])
-
-                        @include('admin._input.input-filemanager', [
                             'name' => 'icon',
                             'label' => 'Иконка',
                             'item' => isset($item) ? $item : '',
-                            'is_image' => true,
-                            'filemanager_id' => 1,
+                            'required' => true
                         ])
 
                         @include('admin._input.input-filemanager', [
@@ -39,15 +32,7 @@
                             'label' => 'Изображение',
                             'item' => isset($item) ? $item : '',
                             'is_image' => true,
-                            'filemanager_id' => 2,
-                        ])
-
-                        @include('admin._input.input-filemanager', [
-                            'name' => 'fon',
-                            'label' => 'Фоновое изображение',
-                            'item' => isset($item) ? $item : '',
-                            'is_image' => true,
-                            'filemanager_id' => 3,
+                            'filemanager_id' => 1,
                         ])
 
                         @include('admin._input.textarea', [
