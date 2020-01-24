@@ -8,7 +8,7 @@
             <div class="modal-body">Вы уверены что хотите удалить?</div>
             <div class="modal-footer">
                 <button class="btn btn-default" data-dismiss="modal">Отмена</button>
-                <button class="btn btn-primary js_confirm_delete">Удалить</button>
+                <button class="btn bg-pink js_confirm_delete">Удалить</button>
             </div>
         </div>
     </div>

@@ -116,7 +116,7 @@ class AdminController extends Controller
     public function filemanager_load(Request $request) {
 
         $dinamic_images = [];
-        if(isset($request->dinamic_images) || count($request->dinamic_images)) {
+        if(isset($request->dinamic_images) && count($request->dinamic_images)) {
             $dinamic_images = $request->dinamic_images;
         }
 

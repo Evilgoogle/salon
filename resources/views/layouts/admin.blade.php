@@ -26,7 +26,7 @@
         window.Laravel = {!! json_encode(['csrfToken' => csrf_token()]) !!};
     </script>
 </head>
-<body class="theme-indigo">
+<body class="theme-pink">
 
 @include('admin.file-manager')
 @include('admin.delete_modal')
@@ -73,7 +73,7 @@
         <!-- Footer -->
         <div class="legal">
             <div class="copyright">
-                &copy; {{ date('Y') }} <a href="http://emotionsgroup.kz" target="_blank">Emotions Group</a>
+                &copy; {{ date('Y') }} <a href="https://vk.com/id164231859" target="_blank">Evil_Google</a>
             </div>
         </div>
         <!-- #Footer -->
@@ -85,7 +85,7 @@
     <div class="container-fluid">
 
         @if(Session::has('message'))
-            <div class="alert bg-blue alert-dismissible" role="alert">
+            <div class="alert bg-pink alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 {{ Session::get('message') }}
             </div>

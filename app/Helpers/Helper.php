@@ -152,9 +152,8 @@ if(!function_exists('issetImg')) {
      */
     function issetImg($img = null) {
         if(isset($img)) {
-            if(file_exists('temp/'.$img)) {
-                return asset('temp/'.preg_replace('#\s#ui', '%20', $img));
-                //return asset('files/'.$img);
+            if(file_exists('files/'.$img)) {
+                return asset('files/'.preg_replace('#\s#ui', '%20', $img));
             } else {
                 return asset('images/default.jpg');
             }

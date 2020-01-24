@@ -13,6 +13,14 @@
                     <form action="/admin/{{ $info->url }}/insert{{ isset($item->id) ? '/'. $item->id : '' }}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
+                        @include('admin._input.input-switch', [
+                            'name' => 'enable',
+                            'label' => 'Состояние',
+                            'item' => isset($item) ? $item : '',
+                            'default' => true,
+                            'on' => 'Включить', 'off' => 'Выключить'
+                        ])
+
                         @include('admin._input.input-text', [
                             'name' => 'title',
                             'label' => 'Заголовок',
@@ -43,7 +51,7 @@
 
                         <div class="row clearfix">
                             <div class="col-sm-12">
-                                <button type="submit" class="btn btn-primary m-t-10 waves-effect">{{ isset($item) ? 'Обновить' : 'Записать' }}</button>
+                                <button type="submit" class="btn bg-pink m-t-10 waves-effect">{{ isset($item) ? 'Обновить' : 'Записать' }}</button>
                             </div>
                         </div>
                     </form>

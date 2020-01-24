@@ -13,7 +13,7 @@
                         {{ isset($required) && $required ? 'required' : '' }}
                         {{ isset($array) && $array ? 'multiple' : '' }}
                         {{ isset($disabled) && $disabled ? 'disabled' : '' }}>
-                    <span class="lever switch-col-blue"></span>
+                    <span class="lever switch-col-pink"></span>
                 {{ $on }}</label>
             </div>
         </div>

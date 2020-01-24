@@ -10,7 +10,7 @@
                     placeholder="{{ $label }}"
                     {{ isset($required) && $required ? 'required' : '' }}
                     {{ isset($array) && $array ? 'multiple' : '' }}
-                    {{ isset($disabled) && $disabled ? 'disabled' : '' }}><?php if (isset($editor) && $editor) {?>{!! isset($item->$name) ? $item->$name : '' !!}<?php } else {?>{{ isset($item->$name) ? $item->$name : '' }}<?php } ?></textarea>
+                    {{ isset($disabled) && $disabled ? 'disabled' : '' }}><?php if (isset($editor) && $editor) {?>{!! isset($item->$name) ? $item->$name : '' !!}<?php } else {?>{{ isset($item->$name) ? $item->$name : '' }}<?php } ?>{{ isset($item->$name) ? $item->$name : html_entity_decode(old($name)) }}</textarea>
             </div>
         </div>
     </div>

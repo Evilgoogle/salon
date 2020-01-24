@@ -15,8 +15,8 @@ class TableServices extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('order')->nullable();
-            $table->boolean('active')->default(1);
+            $table->integer('position')->nullable();
+            $table->boolean('enable')->default(1);
             $table->text('title')->nullable();
             $table->text('desc')->nullable();
             $table->string('icon')->nullable();

@@ -556,7 +556,7 @@ form {
         margin: 0px;
         .active {
             span {
-                background-color: #2196F3;
+                background-color: #000000;
             }
         }
     }
@@ -1114,6 +1114,20 @@ pre {
 }
 
 .goods_preview {
-    width: 80px;
+    width: 150px;
     height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.53);
+    border: 1px solid#000000;
+}
+
+.pagination {
+    margin: 0;
+    li {
+        .active {
+            a {
+                background-color: #000000;
+            }
+        }
+    }
 }

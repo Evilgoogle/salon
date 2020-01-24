@@ -25,7 +25,7 @@ class ServicesController extends Controller
 
     public function index()
     {
-        $items = Service::orderBy('order', 'ASC')->get();
+        $items = Service::orderBy('position', 'ASC')->get();
         $info = $this->info;
 
         return view('admin.services.index', compact(['items', 'info']));
@@ -60,16 +60,12 @@ class ServicesController extends Controller
 
     public function insert(Request $request, $id = null)
     {
-        $rules = [
-            'title' => 'required',
-            'desc' => 'required',
-            'icon' => 'required',
-            'image' => 'required',
-        ];
         $arr = [];
         if (empty($id)) {
             $arr = [
                 'title' => 'required',
+                'desc' => 'required',
+                'icon' => 'required',
                 'image' => 'required',
             ];
         }
@@ -81,11 +77,26 @@ class ServicesController extends Controller
 
         if ($v->fails()) return back()->withErrors($v->errors())->withInput();
 
-        $result = $this->crudClass->insert($this->info->modelName, $id ,$request, null, null, null);
+        $bool_exceptions = ['enable'];
+        $result = $this->crudClass->insert($this->info->modelName, $id ,$request, null, $bool_exceptions, null, null, false);
 
         if ($result['status'] == 'ok')
             return redirect('/admin/'.$this->info->url)->with('message', 'Запись обновлена');
         else
             return back()->withErrors($result['message']);
+    }
+
+    public function changePosition(Request $request)
+    {
+        $result = $this->crudClass->changePosition($this->info->modelName, $request);
+
+        return response()->json($result);
+    }
+
+    public function enable(Request $request)
+    {
+        $result = $this->crudClass->enable($this->info->modelName, $request);
+
+        return response()->json($result);
     }
 }
