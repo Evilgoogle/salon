@@ -851,6 +851,9 @@ header {
     @include respond-to(w-1599) {
       width: 90%;
     }
+    @include respond-to(w-1279) {
+      width: 100%;
+    }
     .bn {
       height: 12vw;
       display: flex;
@@ -887,6 +890,9 @@ header {
           display: block;
           font-size: 18px;
           color: $color-red;
+          @include respond-to(w-1279) {
+            font-size: 17px;
+          }
         }
         h2 {
           font-size: 27px;
@@ -901,14 +907,30 @@ header {
             margin-top: 5px;
             font-size: 23px;
           }
+          @include respond-to(w-1280) {
+            height: 71px;
+          }
+          @include respond-to(w-1279) {
+            height: 64px;
+            font-size: 18px;
+          }
           &:hover {
             color: $color-red;
           }
         }
         .text {
-          height: 70%;
+          height: 52%;
           line-height: 1.4;
           overflow: hidden;
+          @include respond-to(w-1599) {
+            height: 48%;
+          }
+          @include respond-to(w-1280) {
+            height: 50%;
+          }
+          @include respond-to(w-1279) {
+            height: 44%;
+          }
         }
       }
     }
@@ -955,6 +977,13 @@ header {
             align-items: center;
             font-family: $font-Cinzel;
             position: relative;
+            @include respond-to(w-1280) {
+              font-size: 20px;
+            }
+            @include respond-to(w-1279) {
+              height: 40px;
+              font-size: 18px;
+            }
             &:before {
               content: '';
               display: block;

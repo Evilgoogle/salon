@@ -5163,6 +5163,12 @@ header nav ul li .active:before {
   }
 }
 
+@media only screen and (max-width: 1279px) {
+  .page_articles .block {
+    width: 100%;
+  }
+}
+
 .page_articles .block .bn {
   height: 12vw;
   display: -webkit-box;
@@ -5229,6 +5235,12 @@ header nav ul li .active:before {
   color: #b73c64;
 }
 
+@media only screen and (max-width: 1279px) {
+  .page_articles .block .bn .texts time {
+    font-size: 17px;
+  }
+}
+
 .page_articles .block .bn .texts h2 {
   font-size: 27px;
   height: 80px;
@@ -5251,14 +5263,45 @@ header nav ul li .active:before {
   }
 }
 
+@media only screen and (max-width: 1280px) {
+  .page_articles .block .bn .texts h2 {
+    height: 71px;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .page_articles .block .bn .texts h2 {
+    height: 64px;
+    font-size: 18px;
+  }
+}
+
 .page_articles .block .bn .texts h2:hover {
   color: #b73c64;
 }
 
 .page_articles .block .bn .texts .text {
-  height: 70%;
+  height: 52%;
   line-height: 1.4;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 1599px) {
+  .page_articles .block .bn .texts .text {
+    height: 48%;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .page_articles .block .bn .texts .text {
+    height: 50%;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .page_articles .block .bn .texts .text {
+    height: 44%;
+  }
 }
 
 .page_showartiles .editor {
@@ -5408,6 +5451,19 @@ header nav ul li .active:before {
           align-items: center;
   font-family: "Cinzel";
   position: relative;
+}
+
+@media only screen and (max-width: 1280px) {
+  .page_gallary .womans .blocks .bn .box .title {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .page_gallary .womans .blocks .bn .box .title {
+    height: 40px;
+    font-size: 18px;
+  }
 }
 
 .page_gallary .womans .blocks .bn .box .title:before {

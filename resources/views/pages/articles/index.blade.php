@@ -8,7 +8,7 @@
             'title' => 'On-Site Health Clinic vs. On-Site Corporate Spa: What',
             'url' => '1',
             'image' => 'articles_1.jpg',
-            'desc' => 'Keeping employees healthy, fit, and stress-free is a top priority for most HR managers. One key way some companies are tackling that problem is by creating employee-only services on site such as spas or health clinics. Both corporate spas and corporate health clinics offer unique employee health perks.',
+            'desc' => 'Keeping employees healthy, fit, and stress-free is a top priority for most HR managers. One key way some companies are tackling that problem is by creating employee-only services on site such as spas or health clinics. Both corporate spas and corporate health clinics offer unique employee health perks.Keeping employees healthy, fit, and stress-free is a top priority for most HR managers. One key way some companies are tackling that problem is by creating employee-only services on site such as spas or health clinics. Both corporate spas and corporate health clinics offer unique employee health perks.',
             'date' => '2019-05-19 11:58:02'
         ],
         1 => (object)[
