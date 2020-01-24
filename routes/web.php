@@ -111,9 +111,39 @@ Route::group(['middleware' => 'web'], function () {
             Route::get('', 'ServicesController@index');
             Route::get('add', 'ServicesController@add');
             Route::get('edit/{id}', 'ServicesController@edit');
+            Route::get('remove/{id}', 'ServicesController@remove');
             Route::post('insert/{id?}', 'ServicesController@insert');
             Route::post('change-position', 'ServicesController@changePosition');
             Route::post('enable', 'ServicesController@enable');
+        });
+
+        Route::group(['prefix' => 'articles'], function () {
+            Route::get('', 'ArticleController@index');
+            Route::get('add', 'ArticleController@add');
+            Route::get('edit/{id}', 'ArticleController@edit');
+            Route::get('remove/{id}', 'ArticleController@remove');
+            Route::post('insert/{id?}', 'ArticleController@insert');
+            Route::post('enable', 'ArticleController@enable');
+        });
+
+        Route::group(['prefix' => 'gallery'], function () {
+            Route::get('', 'GalleryController@index');
+            Route::get('add', 'GalleryController@add');
+            Route::get('edit/{id}', 'GalleryController@edit');
+            Route::get('remove/{id}', 'GalleryController@remove');
+            Route::post('insert/{id?}', 'GalleryController@insert');
+            Route::post('change-position', 'GalleryController@changePosition');
+            Route::post('enable', 'GalleryController@enable');
+        });
+
+        Route::group(['prefix' => 'foto'], function () {
+            Route::get('', 'FotoController@index');
+            Route::get('add', 'FotoController@add');
+            Route::get('edit/{id}', 'FotoController@edit');
+            Route::get('remove/{id}', 'FotoController@remove');
+            Route::post('insert/{id?}', 'FotoController@insert');
+            Route::post('change-position', 'FotoController@changePosition');
+            Route::post('enable', 'FotoController@enable');
         });
 
         Route::group(['prefix' => 'contacts'], function () {

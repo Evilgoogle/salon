@@ -58,7 +58,7 @@
 
                     <div class="row clearfix">
                         <div class="col-sm-12">
-                            <button type="submit" class="btn btn-primary m-t-10 waves-effect">{{ isset($item) ? 'Обновить' : 'Записать' }}</button>
+                            <button type="submit" class="btn bg-pink m-t-10 waves-effect">{{ isset($item) ? 'Обновить' : 'Записать' }}</button>
                         </div>
                     </div>
                 </form>

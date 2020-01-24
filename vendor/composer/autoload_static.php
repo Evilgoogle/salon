@@ -436,6 +436,7 @@ class ComposerStaticInita7c432565899ad5f9613d186fc978c8d
     );
 
     public static $classMap = array (
+        'App\\Article' => __DIR__ . '/../..' . '/app/Article.php',
         'App\\ClientRequest' => __DIR__ . '/../..' . '/app/ClientRequest.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Contact' => __DIR__ . '/../..' . '/app/Contact.php',
@@ -451,12 +452,14 @@ class ComposerStaticInita7c432565899ad5f9613d186fc978c8d
         'App\\Events\\Event' => __DIR__ . '/../..' . '/app/Events/Event.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Filemanager' => __DIR__ . '/../..' . '/app/Filemanager.php',
+        'App\\Gallery' => __DIR__ . '/../..' . '/app/Gallery.php',
         'App\\Http\\Controllers\\Admin\\AboutController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AboutController.php',
         'App\\Http\\Controllers\\Admin\\AccessController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AccessController.php',
         'App\\Http\\Controllers\\Admin\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminController.php',
+        'App\\Http\\Controllers\\Admin\\ArticleController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ArticleController.php',
         'App\\Http\\Controllers\\Admin\\ClientRequestController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ClientRequestController.php',
-        'App\\Http\\Controllers\\Admin\\ContacsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ContacsController.php',
         'App\\Http\\Controllers\\Admin\\ContactsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ContactsController.php',
+        'App\\Http\\Controllers\\Admin\\GalleryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/GalleryController.php',
         'App\\Http\\Controllers\\Admin\\LangController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/LangController.php',
         'App\\Http\\Controllers\\Admin\\LangInterfaceController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/LangInterfaceController.php',
         'App\\Http\\Controllers\\Admin\\PageController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PageController.php',
@@ -497,6 +500,7 @@ class ComposerStaticInita7c432565899ad5f9613d186fc978c8d
         'App\\RolePermission' => __DIR__ . '/../..' . '/app/RolePermission.php',
         'App\\RoleUser' => __DIR__ . '/../..' . '/app/RoleUser.php',
         'App\\Seo' => __DIR__ . '/../..' . '/app/Seo.php',
+        'App\\Service' => __DIR__ . '/../..' . '/app/Service.php',
         'App\\Subscribe' => __DIR__ . '/../..' . '/app/Subscribe.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\languageInterface' => __DIR__ . '/../..' . '/app/languageInterface.php',

@@ -8,7 +8,7 @@
         <div class="card">
             <div class="header">
                 <h2>{{ $info->head }}</h2>
-                <a href="/admin/{{ $info->url }}/add" class="btn btn-info waves-effect m-t-15">Добавить</a>
+                <a href="/admin/{{ $info->url }}/add" class="btn bg-pink waves-effect m-t-15">Добавить</a>
             </div>
             <div class="body table-responsive">
                 <table class="table table-bordered table-striped js-table dataTable">

@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Article' => $baseDir . '/app/Article.php',
     'App\\ClientRequest' => $baseDir . '/app/ClientRequest.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Contact' => $baseDir . '/app/Contact.php',
@@ -21,12 +22,14 @@ return array(
     'App\\Events\\Event' => $baseDir . '/app/Events/Event.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Filemanager' => $baseDir . '/app/Filemanager.php',
+    'App\\Gallery' => $baseDir . '/app/Gallery.php',
     'App\\Http\\Controllers\\Admin\\AboutController' => $baseDir . '/app/Http/Controllers/Admin/AboutController.php',
     'App\\Http\\Controllers\\Admin\\AccessController' => $baseDir . '/app/Http/Controllers/Admin/AccessController.php',
     'App\\Http\\Controllers\\Admin\\AdminController' => $baseDir . '/app/Http/Controllers/Admin/AdminController.php',
+    'App\\Http\\Controllers\\Admin\\ArticleController' => $baseDir . '/app/Http/Controllers/Admin/ArticleController.php',
     'App\\Http\\Controllers\\Admin\\ClientRequestController' => $baseDir . '/app/Http/Controllers/Admin/ClientRequestController.php',
-    'App\\Http\\Controllers\\Admin\\ContacsController' => $baseDir . '/app/Http/Controllers/Admin/ContacsController.php',
     'App\\Http\\Controllers\\Admin\\ContactsController' => $baseDir . '/app/Http/Controllers/Admin/ContactsController.php',
+    'App\\Http\\Controllers\\Admin\\GalleryController' => $baseDir . '/app/Http/Controllers/Admin/GalleryController.php',
     'App\\Http\\Controllers\\Admin\\LangController' => $baseDir . '/app/Http/Controllers/Admin/LangController.php',
     'App\\Http\\Controllers\\Admin\\LangInterfaceController' => $baseDir . '/app/Http/Controllers/Admin/LangInterfaceController.php',
     'App\\Http\\Controllers\\Admin\\PageController' => $baseDir . '/app/Http/Controllers/Admin/PageController.php',
@@ -67,6 +70,7 @@ return array(
     'App\\RolePermission' => $baseDir . '/app/RolePermission.php',
     'App\\RoleUser' => $baseDir . '/app/RoleUser.php',
     'App\\Seo' => $baseDir . '/app/Seo.php',
+    'App\\Service' => $baseDir . '/app/Service.php',
     'App\\Subscribe' => $baseDir . '/app/Subscribe.php',
     'App\\User' => $baseDir . '/app/User.php',
     'App\\languageInterface' => $baseDir . '/app/languageInterface.php',
