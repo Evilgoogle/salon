@@ -17,7 +17,7 @@
                                     <div class="input-group">
                                         <input type="text" name="name" class="form-control" placeholder="Введите загаловок..">
                                         <span class="input-group-btn">
-                                            <button class="btn btn-default" type="submit">Искать!</button>
+                                            <button class="btn bg-pink" type="submit">Искать!</button>
                                         </span>
                                     </div>
                                 </div>
@@ -37,7 +37,7 @@
                                 <div class="title">Загрузить изображение</div>
                                 <div class="line"></div>
                                 <div class="button_block">
-                                    <input id="select_init" type="file" class="btn btn-primary btn-lg" name="download" multiple>
+                                    <input id="select_init" type="file" class="btn bg-pink btn-lg" name="download" multiple>
                                     <div class="load"></div>
                                     <div class="info">Выберите одно или несколько изображений</div>
                                 </div>
@@ -103,7 +103,7 @@
                                                 <button type="button" class="btn btn-default cropper_frame_remove"><span class="fas fa-power-off"></span></button>
                                             </div>
                                         </div>
-                                        <button class="btn btn-primary js_cropend">Сохранить</button>
+                                        <button class="btn bg-pink js_cropend">Сохранить</button>
                                     </div>
                                 </div>
                             </div>
@@ -138,18 +138,18 @@
                                                 <input type="number" class="form-control" placeholder="Новая ширина ..." name="size">
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Сохранить</button>
+                                        <button type="submit" class="btn bg-pink">Сохранить</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                         <div class="delete_block">
                             <div class="main_block">
-                                <div class="title">Если это изображение раставлена в товарах, то при удалнеий он в них исчезнеть. Продолжить?</div>
+                                <div class="title">Если это изображение раставлена в сайте, то при удалнеий он исчезнеть. Продолжить?</div>
                                 <div class="line"></div>
                                 <div class="delete">
                                     <button class="btn btn-danger js_ok">Да</button>
-                                    <button class="btn btn-primary js_no">Нет</button>
+                                    <button class="btn bg-pink js_no">Нет</button>
                                 </div>
                             </div>
                         </div>
@@ -158,7 +158,7 @@
                                 <div class="title">Заменить изображение</div>
                                 <div class="line"></div>
                                 <div class="button_block">
-                                    <input id="replace_init" type="file" class="btn btn-primary btn-lg" name="download">
+                                    <input id="replace_init" type="file" class="btn bg-pink btn-lg" name="download">
                                     <div class="load"></div>
                                     <div class="info">Выберите изображение</div>
                                 </div>
@@ -175,7 +175,7 @@
                                 <div class="del"> --- </div>
                             </div>
                         </div>
-                        <button class="js_file_set btn btn-primary btn-lg">Установить</button>
+                        <button class="js_file_set btn bg-pink btn-lg">Установить</button>
                     </div>
                     {{-- Кнопка загрузить --}}
                     <button class="upload_file"><span>+</span></button>

@@ -17,28 +17,6 @@
             'image' => 'basic_3.jpg',
         ]
     ];
-    $gal = [
-        0 => (object)[
-            'id' => 1,
-            'image' => 'gal_1.jpg',
-        ],
-        1 => (object)[
-            'id' => 2,
-            'image' => 'gal_2.jpg',
-        ],
-        2 => (object)[
-            'id' => 3,
-            'image' => 'gal_3.jpg',
-        ],
-        3 => (object)[
-            'id' => 4,
-            'image' => 'gal_4.jpg',
-        ],
-        4 => (object)[
-            'id' => 4,
-            'image' => 'gal_2.jpg',
-        ],
-    ];
     ?>
 
     <div class="page_main">
@@ -105,7 +83,7 @@
                 <div class="swiper-container gallery-top">
                     <div class="swiper-wrapper">
                         @foreach($gal as $item)
-                            <div class="swiper-slide" style="background-image:url('/temp/{{ $item->image }}')"></div>
+                            <div class="swiper-slide" style="background-image:url('{{ issetImg($item->image) }}')"></div>
                         @endforeach
                     </div>
                     <!-- Add Arrows -->
@@ -115,7 +93,7 @@
                 <div class="swiper-container gallery-thumbs">
                     <div class="swiper-wrapper">
                         @foreach($gal as $item)
-                            <div class="swiper-slide" style="background-image:url('/temp/{{ $item->image }}')"></div>
+                            <div class="swiper-slide" style="background-image:url('{{ issetImg($item->image) }}')"></div>
                         @endforeach
                     </div>
                 </div>
@@ -146,7 +124,7 @@
                     @endforeach
                 </div>
                 <small class="wow anm_fadeInTop" data-wow-duration="1.2s" data-wow-delay="0.5s">Здесь показана только часть услуг. Узнайте о всех услуг нажав сюда</small>
-                <a href="#" class="all_services"><span>Узнать все услуги</span></a>
+                <a href="/services" class="all_services"><span>Узнать все услуги</span></a>
             </div>
         </section>
         <section class="section_order">

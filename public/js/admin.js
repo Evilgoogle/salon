@@ -10132,13 +10132,13 @@ function create_panel(act, data) {
 
     if (act == 'act') {
 
-        return '<div class="file_title">Действие</div>' + '<div>' + '<button class="btn btn-primary js_view" data-image="' + data.image + '">Посмотреть</button>' + '<button class="btn btn-default js_crop" data-id="' + data.id + '" data-image="' + data.image + '" data-type="' + data.type + '">Обрезать</button>' + '<button class="btn btn-default js_resize" data-id="' + data.id + '" data-width="' + data.width + '" data-height="' + data.height + '" data-image="' + data.image + '">Изменить размер</button>' + '<button class="btn btn-default js_replace" data-id="' + data.id + '">Заменить</button>' + '</div>';
+        return '<div class="file_title">Действие</div>' + '<div>' + '<button class="btn bg-pink js_view" data-image="' + data.image + '">Посмотреть</button>' + '<button class="btn btn-default js_crop" data-id="' + data.id + '" data-image="' + data.image + '" data-type="' + data.type + '">Обрезать</button>' + '<button class="btn btn-default js_resize" data-id="' + data.id + '" data-width="' + data.width + '" data-height="' + data.height + '" data-image="' + data.image + '">Изменить размер</button>' + '<button class="btn btn-default js_replace" data-id="' + data.id + '">Заменить</button>' + '</div>';
     } else if (act == 'monitor') {
 
         return '<div class="file_monitor">' + '<div class="file_title">Монитор</div>' + '<div>' + '<div class="param"><b>Формат:</b> ' + typeFile_text(data.type) + '</div>' + '<div class="param"><b>Ширина:</b> <span class="js_monitor_w">' + data.width + '</span>px</div>' + '<div class="param"><b>Высота:</b> <span class="js_monitor_h">' + data.height + '</span>px</div>' + '<div class="param"><b>Размер:</b> <span class="js_monitor_s">' + data.mass + '</span></div>' + '<div class="param"><b>Дата:</b> ' + data.created_at + '</div>' + '</div>' + '</div>';
     } else if (act == 'info') {
 
-        return '<div class="file_altblock">' + '<div class="file_title">Инфо</div>' + '<form id="filemanager_name_alt">' + '<div class="col-sm-12">' + '<div class="form-group">' + '<div class="form-line">' + '<input type="hidden" name="id" value="' + data.id + '">' + '<input type="text" class="form-control" name="name" placeholder="Заголовок..." value="' + data.name + '">' + '</div>' + '</div>' + '</div>' + '<div class="col-sm-12">' + '<div class="form-group">' + '<div class="form-line">' + '<input type="text" class="form-control" name="alt" placeholder="Alt..." value="' + data.alt + '">' + '</div>' + '</div>' + '</div>' + '<button type="submit" class="btn btn-primary">Сохранить</button>' + '</form>' + '</div>';
+        return '<div class="file_altblock">' + '<div class="file_title">Инфо</div>' + '<form id="filemanager_name_alt">' + '<div class="col-sm-12">' + '<div class="form-group">' + '<div class="form-line">' + '<input type="hidden" name="id" value="' + data.id + '">' + '<input type="text" class="form-control" name="name" placeholder="Заголовок..." value="' + data.name + '">' + '</div>' + '</div>' + '</div>' + '<div class="col-sm-12">' + '<div class="form-group">' + '<div class="form-line">' + '<input type="text" class="form-control" name="alt" placeholder="Alt..." value="' + data.alt + '">' + '</div>' + '</div>' + '</div>' + '<button type="submit" class="btn bg-pink">Сохранить</button>' + '</form>' + '</div>';
     } else if (act == 'del') {
 
         return '<div class="file_title">Удалить изображение</div>' + '<button class="btn btn-danger js_delete" data-id="' + data.id + '">Удалить</button>';
@@ -10572,12 +10572,12 @@ $(document).on('click', '#image_manager .js_file_set', function (event) {
     if (Object.keys(selected_file).length != 0) {
 
         if (editor_returned) {
-            console.log(22);
+
             ckeditor.insertHtml('<p><img src="' + location.protocol + '//' + location.hostname + '/files/' + selected_file.image + '" alt="' + selected_file.alt + '" style="width: ' + selected_file.width + 'px; height: ' + selected_file.height + 'px;"></p>');
         } else {
 
             $('#filemanager_create_' + basic_id).html('<img src="' + location.protocol + '//' + location.hostname + '/files/' + selected_file.image + '">');
-            $('#filemanager_server_image_' + basic_id).val(selected_file.image);
+            $('#filemanager_server_image_' + basic_id).val(selected_file.image.replace(/\?id\=.*/gi, ''));
         }
         $('#image_manager').modal('hide');
     } else {

@@ -112,8 +112,9 @@ class MainController extends Controller
     public function index() {
 
         $services = App\Service::orderBy('position', 'ASC')->where('enable', 1)->take(4)->get();
+        $gal = App\Gallery::orderBy('position', 'ASC')->where('enable', 1)->get();
 
-        return view('pages.main', compact('services'));
+        return view('pages.main', compact('services', 'gal'));
     }
 
     public function services() {
@@ -124,7 +125,6 @@ class MainController extends Controller
     }
 
     public function articles($url = null) {
-
 
         if($url !== null) {
 
@@ -145,7 +145,10 @@ class MainController extends Controller
 
     public function foto_gallary() {
 
-        return view('pages.gallary', compact(''));
+        $gal = App\Gallery::orderBy('position', 'ASC')->where('enable', 1)->get();
+        $womans = App\Foto::orderBy('position', 'ASC')->where('enable', 1)->get();
+
+        return view('pages.gallary', compact('gal', 'womans'));
     }
 
     // Sitemaps

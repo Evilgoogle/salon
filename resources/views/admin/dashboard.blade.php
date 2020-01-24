@@ -11,7 +11,7 @@
             <div class="card">
                 <div class="header">Добро пожаловать в Админку</div>
                 <div class="header">
-                    <a href="/admin/services" class="btn bg-pink waves-effect m-t-15">Статьий</a>
+                    <a href="/admin/articles" class="btn bg-pink waves-effect m-t-15">Статьий</a>
                     <a href="/admin/requests" class="btn bg-black waves-effect m-t-15">Заявки</a>
                 </div>
             </div>

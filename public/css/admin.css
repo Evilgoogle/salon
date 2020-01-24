@@ -6253,11 +6253,11 @@ body.compensate-for-scrollbar {
 .image_manager .modal-body {
   height: 92%;
   padding: 10px;
-  background-color: #e8edf1;
+  background-color: #D0CBCD;
 }
 
 .image_manager .modal-header {
-  background-color: #2196F3;
+  background-color: #E91E63;
   padding-bottom: 18px;
   color: #FFFFFF;
 }
@@ -6516,8 +6516,8 @@ body.compensate-for-scrollbar {
 }
 
 .image_manager .images_content .filecontent .ajax_content .bn .column .blue {
-  background: -webkit-gradient(linear, left bottom, left top, from(#3792db), color-stop(20%, #1e8cdb), to(#fefefe));
-  background: linear-gradient(to top, #3792db 0%, #1e8cdb 20%, #fefefe 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#db4e7d), color-stop(20%, #db2a61), to(#fefefe));
+  background: linear-gradient(to top, #db4e7d 0%, #db2a61 20%, #fefefe 100%);
 }
 
 .image_manager .images_content .filecontent .ajax_content .bn .column .blue .title {
@@ -6525,7 +6525,7 @@ body.compensate-for-scrollbar {
 }
 
 .image_manager .images_content .filecontent .ajax_content .bn .column .active {
-  border: 1px solid #2196F3;
+  border: 1px solid #E91E63;
 }
 
 .image_manager .images_content .filecontent .ajax_content .bn .column .active:before {
@@ -6860,7 +6860,7 @@ body.compensate-for-scrollbar {
   left: 10px;
   bottom: 0px;
   border-radius: 50%;
-  background-color: #2196F3;
+  background-color: #E91E63;
   color: #FFFFFF;
   font-size: 36px;
   display: -webkit-box;
@@ -6882,7 +6882,7 @@ body.compensate-for-scrollbar {
 }
 
 .image_manager .images_content .upload_file:hover {
-  background-color: #1E83D4;
+  background-color: #E91E63;
   -webkit-transform: translateY(-7px);
           transform: translateY(-7px);
 }

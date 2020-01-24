@@ -410,7 +410,7 @@ function create_panel(act, data) {
 
         return '<div class="file_title">Действие</div>' +
             '<div>' +
-            '<button class="btn btn-primary js_view" data-image="'+data.image+'">Посмотреть</button>' +
+            '<button class="btn bg-pink js_view" data-image="'+data.image+'">Посмотреть</button>' +
             '<button class="btn btn-default js_crop" data-id="'+data.id+'" data-image="'+data.image+'" data-type="'+data.type+'">Обрезать</button>' +
             '<button class="btn btn-default js_resize" data-id="'+data.id+'" data-width="'+data.width+'" data-height="'+data.height+'" data-image="'+data.image+'">Изменить размер</button>' +
             '<button class="btn btn-default js_replace" data-id="'+data.id+'">Заменить</button>' +
@@ -447,7 +447,7 @@ function create_panel(act, data) {
             '</div>' +
             '</div>' +
             '</div>' +
-            '<button type="submit" class="btn btn-primary">Сохранить</button>' +
+            '<button type="submit" class="btn bg-pink">Сохранить</button>' +
             '</form>' +
             '</div>';
     } else if(act == 'del') {
@@ -885,12 +885,12 @@ $(document).on('click', '#image_manager .js_file_set', function (event) {
     if(Object.keys(selected_file).length != 0) {
 
         if(editor_returned) {
-console.log(22);
+
             ckeditor.insertHtml('<p><img src="'+location.protocol+'//'+location.hostname+'/files/'+selected_file.image+'" alt="'+selected_file.alt+'" style="width: '+selected_file.width+'px; height: '+selected_file.height+'px;"></p>');
         } else {
 
             $('#filemanager_create_'+basic_id).html('<img src="'+location.protocol+'//'+location.hostname+'/files/'+selected_file.image+'">');
-            $('#filemanager_server_image_'+basic_id).val(selected_file.image);
+            $('#filemanager_server_image_'+basic_id).val(selected_file.image.replace(/\?id\=.*/gi, ''));
         }
         $('#image_manager').modal('hide');
     } else {

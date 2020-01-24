@@ -13,10 +13,10 @@
   .modal-body {
     height: 92%;
     padding: 10px;
-    background-color: #e8edf1;
+    background-color: #D0CBCD;
   }
   .modal-header {
-    background-color: #2196F3;
+    background-color: #E91E63;
     padding-bottom: 18px;
     color: #FFFFFF;
     .modal-title {
@@ -203,13 +203,13 @@
               }
             }
             .blue {
-              background: linear-gradient(to top, rgb(55, 146, 219) 0%, rgb(30, 140, 219) 20%, rgba(254,254,254,1) 100%);
+              background: linear-gradient(to top, rgb(219, 78, 125) 0%, rgb(219, 42, 97) 20%, rgba(254,254,254,1) 100%);
               .title {
                 color: #FFFFFF;
               }
             }
             .active {
-              border: 1px solid#2196F3;
+              border: 1px solid#E91E63;
               &:before {
                 background: url("../images/selected.png") no-repeat;
                 background-size: cover;
@@ -443,7 +443,7 @@
       left: 10px;
       bottom: 0px;
       border-radius: 50%;
-      background-color: #2196F3;
+      background-color: #E91E63;
       color: #FFFFFF;
       font-size: 36px;
       display: flex;
@@ -454,7 +454,7 @@
       transform: translateY(0px);
       box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.42);
       &:hover {
-        background-color: #1E83D4;
+        background-color: #E91E63;
         transform: translateY(-7px);
       }
     }
