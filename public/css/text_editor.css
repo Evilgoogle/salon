@@ -431,7 +431,7 @@ body h6 {
 
 body ul {
   font-family: "Raleway-Regular" !important;
-  color: #FFFFFF !important;
+  color: #15141e !important;
   margin: 5px 0;
   padding: 0 0 0 14px;
 }
@@ -442,13 +442,14 @@ body ul li {
 }
 
 body ul li:before {
-  content: "-";
-  width: 5px;
-  height: 5px;
-  color: #FFFFFF;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #b73c64;
   position: absolute;
+  border-radius: 50%;
   left: -13px;
-  top: 2px;
+  top: 6px;
 }
 
 body p {

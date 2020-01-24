@@ -5315,6 +5315,8 @@ header nav ul li .active:before {
 .page_showartiles .editor img {
   max-width: 100% !important;
   height: auto !important;
+  -webkit-box-shadow: 0px 2px 20px 0px rgba(183, 60, 101, 0.6);
+          box-shadow: 0px 2px 20px 0px rgba(183, 60, 101, 0.6);
 }
 
 .page_showartiles .editor strong,
