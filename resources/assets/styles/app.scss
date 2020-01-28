@@ -39,6 +39,10 @@
     padding-left: 40px;
     padding-right: 40px;
   }
+  @include respond-to(w-479) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 .preloader {
   width: 100%;
@@ -60,6 +64,18 @@
     height: 30%;
     background: url("../images/preloader.gif") center no-repeat;
     background-size: contain;
+    @include respond-to(w-799) {
+      width: 40%;
+      height: 40%;
+    }
+    @include respond-to(w-639) {
+      width: 50%;
+      height: 50%;
+    }
+    @include respond-to(w-479) {
+      width: 70%;
+      height: 70%;
+    }
   }
   &_active {
     visibility: visible;
@@ -95,6 +111,10 @@ h1, h2, h3, h4 {
   @include respond-to(w-799) {
     width: 70%;
   }
+  @include respond-to(w-639) {
+    width: 80%;
+    margin: 0 auto 10vw;
+  }
   &:before {
     content: '';
     display: block;
@@ -123,6 +143,9 @@ h1, h2, h3, h4 {
     @include respond-to(w-799) {
       font-size: 25px;
     }
+    @include respond-to(w-479) {
+      font-size: 23px;
+    }
   }
   small {
     text-align: center;
@@ -134,16 +157,26 @@ h1, h2, h3, h4 {
       font-size: 27px;
       margin: 17px auto;
     }
+    @include respond-to(w-479) {
+      font-size: 21px;
+    }
   }
 }
 .ul_vantage {
   margin: 0;
   padding: 0;
   display: flex;
+  @include respond-to(w-479) {
+    flex-direction: column;
+  }
   li {
     list-style-type: none;
     @include respond-to(w-799) {
       width: 33.3%;
+    }
+    @include respond-to(w-479) {
+      width: 100%;
+      margin: 10px 0;
     }
     i {
       font-size: 90px;
@@ -196,6 +229,9 @@ body {
   @include img_cover("../images/services.jpg");
   padding: 5vw 0 3vw;
   position: relative;
+  @include respond-to(w-479) {
+    padding: 11vw 0 3vw;
+  }
   &:before {
     content: '';
     display: block;
@@ -232,11 +268,18 @@ body {
         @include respond-to(w-1023) {
           width: 100%;
         }
+        @include respond-to(w-639) {
+          flex-direction: column;
+          margin-bottom: 60px;
+        }
         .icon {
           width: 40%;
           display: flex;
           justify-content: center;
           position: relative;
+          @include respond-to(w-639) {
+            width: 100%;
+          }
           .ico {
             width: 120px;
             height: 120px;
@@ -277,6 +320,21 @@ body {
               top: 180px;
               left: 10px;
             }
+            @include respond-to(w-639) {
+              width: 90px;
+              height: 90px;
+              top: 195px;
+              left: 25px;
+            }
+            @include respond-to(w-479) {
+              top: 210px;
+              left: 10px;
+            }
+            @include respond-to(w-374) {
+              width: 80px;
+              height: 80px;
+              top: 180px;
+            }
             i {
               color: $color-red;
               font-size: 80px;
@@ -288,6 +346,9 @@ body {
               }
               @include respond-to(w-1366) {
                 font-size: 55px;
+              }
+              @include respond-to(w-374) {
+                font-size: 45px;
               }
             }
           }
@@ -320,6 +381,15 @@ body {
               width: 250px;
               height: 250px;
             }
+            @include respond-to(w-639) {
+              width: 300px;
+              height: 300px;
+              position: static;
+            }
+            @include respond-to(w-374) {
+              width: 250px;
+              height: 250px;
+            }
             .insert {
               @include set_cover;
               height: 100%;
@@ -340,6 +410,14 @@ body {
           @include respond-to(w-1279) {
             padding: 0 30px;
           }
+          @include respond-to(w-639) {
+            width: 100%;
+            padding: 0 20px;
+            margin-top: 30px;
+          }
+          @include respond-to(w-479) {
+            padding: 0 10px;
+          }
           h3 {
             font-family: $font-Cinzel;
             font-size: 30px;
@@ -357,6 +435,9 @@ body {
             }
             @include respond-to(w-1023) {
               font-size: 25px;
+            }
+            @include respond-to(w-639) {
+              text-align: center;
             }
           }
           .desc {
@@ -383,6 +464,15 @@ body {
               font-size: 18px;
               height: 120px;
             }
+            @include respond-to(w-639) {
+              height: 100px;
+            }
+            @include respond-to(w-479) {
+              height: 110px;
+            }
+            @include respond-to(w-374) {
+              height: 135px;
+            }
           }
           .price {
             width: 80%;
@@ -407,6 +497,14 @@ body {
               font-size: 21px;
               height: 33px;
             }
+            @include respond-to(w-639) {
+              width: 100%;
+              height: 40px;
+              margin-top: 10px;
+            }
+            @include respond-to(w-479) {
+              margin-top: 20px;
+            }
           }
         }
       }
@@ -425,6 +523,12 @@ body {
       }
       @include respond-to(w-1279) {
         font-size: 24px;
+      }
+      @include respond-to(w-639) {
+        font-size: 23px;
+      }
+      @include respond-to(w-479) {
+        font-size: 20px;
       }
     }
     .all_services {
@@ -472,6 +576,9 @@ header {
   @include respond-to(w-1366) {
     height: 70px;
   }
+  @include respond-to(w-479) {
+    height: 56px;
+  }
   .logo {
     @include a_reset($color-white);
     font-family: $font-Cinzel;
@@ -479,6 +586,9 @@ header {
     font-size: 50px;
     @include respond-to(w-1366) {
       font-size: 45px;
+    }
+    @include respond-to(w-479) {
+      font-size: 35px;
     }
   }
   .header_block {
@@ -523,11 +633,11 @@ header {
       position: fixed;
       top: 0;
       left: 0;
-      padding: 15px 45px;
+      padding: 15px 45px 45px;
       box-sizing: border-box;
     }
     @include respond-to(w-639) {
-      padding: 10px 20px;
+      padding: 10px 20px 20px;
     }
     .mobile_logo {
       height: 100px;
@@ -620,6 +730,9 @@ header {
     @include set_cover;
     height: 40vw;
     position: relative;
+    @include respond-to(w-639) {
+      height: 70vw;
+    }
     &:before {
       content: '';
       display: block;
@@ -643,6 +756,9 @@ header {
   }
   .gallery-thumbs {
     margin-top: 10px;
+    @include respond-to(w-479) {
+      margin-bottom: 10px;
+    }
     .swiper-slide {
       height: 10vw;
       position: relative;
@@ -676,6 +792,9 @@ header {
         width: 80px;
         height: 80px;
       }
+      @include respond-to(w-374) {
+        display: none;
+      }
       &:before {
         content: '';
         display: block;
@@ -705,12 +824,22 @@ header {
     }
     .swiper-button-next {
       right: 30px;
+      @include respond-to(w-639) {
+        right: 20px;
+        bottom: 10px;
+        top: auto;
+      }
       i {
         margin-right: -5px;
       }
     }
     .swiper-button-prev {
       left: 30px;
+      @include respond-to(w-639) {
+        left: 20px;
+        bottom: 10px;
+        top: auto;
+      }
       i {
         margin-left: -5px;
       }
@@ -740,6 +869,9 @@ header {
         @include respond-to(w-1023) {
           width: 65%;
         }
+        @include respond-to(w-639) {
+          width: 80%;
+        }
         .company {
           font-size: 90px;
           @include respond-to(w-1366) {
@@ -747,6 +879,9 @@ header {
           }
           @include respond-to(w-1279) {
             font-size: 70px;
+          }
+          @include respond-to(w-374) {
+            font-size: 63px;
           }
         }
         h1 {
@@ -760,6 +895,9 @@ header {
           }
           @include respond-to(w-1279) {
             font-size: 25px;
+          }
+          @include respond-to(w-479) {
+            font-size: 22px;
           }
         }
       }
@@ -780,6 +918,9 @@ header {
         @include respond-to(w-799) {
           line-height: 1.4;
         }
+        @include respond-to(w-639) {
+          width: 80%;
+        }
         .phone {
           @include a_reset($color-red);
           margin: 0 20px;
@@ -793,6 +934,13 @@ header {
           @include respond-to(w-1023) {
             font-size: 21px;
           }
+          @include respond-to(w-639) {
+            font-size: 30px;
+            display: block;
+          }
+          @include respond-to(w-479) {
+            font-size: 24px;
+          }
         }
         .soc {
           width: 40%;
@@ -803,12 +951,21 @@ header {
             width: 55%;
             margin: 5vw auto 0;
           }
+          @include respond-to(w-639) {
+            width: 70%;
+          }
+          @include respond-to(w-479) {
+            width: 90%;
+          }
           .bn {
             i {
               color: $color-red;
               font-size: 40px;
               @include respond-to(w-1279) {
                 font-size: 30px;
+              }
+              @include respond-to(w-639) {
+                font-size: 40px;
               }
             }
           }
@@ -826,6 +983,9 @@ header {
     }
     @include respond-to(w-1279) {
       padding: 8vw 0;
+    }
+    @include respond-to(w-479) {
+      padding: 12vw 0;
     }
     &:before {
       content: '';
@@ -857,6 +1017,13 @@ header {
       }
       @include respond-to(w-1023) {
         width: 80%;
+      }
+      @include respond-to(w-639) {
+        font-size: 15px;
+        line-height: 1.4;
+      }
+      @include respond-to(w-479) {
+        font-size: 16px;
       }
       .video {
         width: 60%;
@@ -923,6 +1090,12 @@ header {
         @include respond-to(w-1279) {
           font-size: 24px;
         }
+        @include respond-to(w-479) {
+          font-size: 22px;
+        }
+        @include respond-to(w-374) {
+          font-size: 20px;
+        }
       }
       .mini {
         margin-top: 20px;
@@ -936,6 +1109,9 @@ header {
         }
         @include respond-to(w-799) {
           margin-top: 5px;
+        }
+        @include respond-to(w-639) {
+          display: none;
         }
       }
     }
@@ -1167,6 +1343,9 @@ footer {
   @include img_cover("../images/footer.jpg");
   padding: 5vw 0;
   box-sizing: border-box;
+  @include respond-to(w-799) {
+    height: auto;
+  }
   .contain {
     height: 80%;
     display: flex;
@@ -1208,12 +1387,22 @@ footer {
         @include respond-to(w-1279) {
           font-size: 22px;
         }
+        @include respond-to(w-374) {
+          font-size: 18px;
+        }
       }
       .soc {
         width: 40%;
         display: flex;
         justify-content: space-between;
         margin: 30px 0;
+        @include respond-to(w-799) {
+          width: 60%;
+          margin: 40px auto;
+        }
+        @include respond-to(w-639) {
+          width: 90%;
+        }
         .bn {
           i {
             color: $color-red;
@@ -1224,12 +1413,23 @@ footer {
             @include respond-to(w-1279) {
               font-size: 30px;
             }
+            @include respond-to(w-799) {
+              font-size: 45px;
+            }
           }
         }
       }
       .js_order {
         background-color: $color-blue;
         box-shadow: $box_shadow;
+        @include respond-to(w-799) {
+          width: 60%;
+          height: 50px;
+          margin: 0 auto 40px;
+        }
+        @include respond-to(w-374) {
+          width: 90%;
+        }
       }
     }
   }
@@ -1238,6 +1438,7 @@ footer {
     height: 85%;
     @include respond-to(w-799) {
       width: 100%;
+      height: 100%;
     }
     address {
      display: block;
@@ -1245,6 +1446,9 @@ footer {
       font-family: $font-Cinzel;
       @include respond-to(w-1366) {
         font-size: 20px;
+      }
+      @include respond-to(w-374) {
+        font-size: 18px;
       }
     }
   }
@@ -1262,6 +1466,9 @@ footer {
   box-shadow: $box_shadow;
   @include respond-to(w-1366) {
     height: 90%;
+  }
+  @include respond-to(w-799) {
+    height: 50vw;
   }
 }
 
