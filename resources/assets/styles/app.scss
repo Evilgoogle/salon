@@ -92,6 +92,9 @@ h1, h2, h3, h4 {
 .main_title {
   width: 50%;
   margin: 0 auto 3vw;
+  @include respond-to(w-799) {
+    width: 70%;
+  }
   &:before {
     content: '';
     display: block;
@@ -117,6 +120,9 @@ h1, h2, h3, h4 {
     @include respond-to(w-1279) {
       font-size: 29px;
     }
+    @include respond-to(w-799) {
+      font-size: 25px;
+    }
   }
   small {
     text-align: center;
@@ -136,6 +142,9 @@ h1, h2, h3, h4 {
   display: flex;
   li {
     list-style-type: none;
+    @include respond-to(w-799) {
+      width: 33.3%;
+    }
     i {
       font-size: 90px;
       display: block;
@@ -153,6 +162,10 @@ h1, h2, h3, h4 {
       margin: 30px auto 0;
       display: block;
       font-family: $font-Cinzel;
+      @include respond-to(w-799) {
+        width: 90%;
+        word-wrap: break-word;
+      }
     }
   }
 }
@@ -168,6 +181,9 @@ body {
   }
   @include respond-to(w-1279) {
     font-size: 16px;
+  }
+  @include respond-to(w-1023) {
+    font-size: 18px;
   }
 }
 .page_padding {
@@ -200,6 +216,9 @@ body {
       @include respond-to(w-1279) {
         width: 87%;
       }
+      @include respond-to(w-1023) {
+        flex-direction: column;
+      }
       .bn {
         width: 50%;
         display: flex;
@@ -209,6 +228,9 @@ body {
         }
         @include respond-to(w-1279) {
           margin-bottom: 80px;
+        }
+        @include respond-to(w-1023) {
+          width: 100%;
         }
         .icon {
           width: 40%;
@@ -251,6 +273,10 @@ body {
               top: 130px;
               left: -15px;
             }
+            @include respond-to(w-1023) {
+              top: 180px;
+              left: 10px;
+            }
             i {
               color: $color-red;
               font-size: 80px;
@@ -290,6 +316,10 @@ body {
               width: 200px;
               height: 200px;
             }
+            @include respond-to(w-1023) {
+              width: 250px;
+              height: 250px;
+            }
             .insert {
               @include set_cover;
               height: 100%;
@@ -325,6 +355,9 @@ body {
             @include respond-to(w-1279) {
               font-size: 21px;
             }
+            @include respond-to(w-1023) {
+              font-size: 25px;
+            }
           }
           .desc {
             height: 180px;
@@ -345,6 +378,10 @@ body {
             }
             @include respond-to(w-1279) {
               font-size: 17px;
+            }
+            @include respond-to(w-1023) {
+              font-size: 18px;
+              height: 120px;
             }
           }
           .price {
@@ -435,6 +472,15 @@ header {
   @include respond-to(w-1366) {
     height: 70px;
   }
+  .logo {
+    @include a_reset($color-white);
+    font-family: $font-Cinzel;
+    text-transform: uppercase;
+    font-size: 50px;
+    @include respond-to(w-1366) {
+      font-size: 45px;
+    }
+  }
   .header_block {
     height: 100%;
     border-bottom: 1px solid$color-red;
@@ -445,39 +491,83 @@ header {
       justify-content: space-between;
       align-items: center;
     }
-    .logo {
-      @include a_reset($color-white);
-      font-family: $font-Cinzel;
-      text-transform: uppercase;
-      font-size: 50px;
-      @include respond-to(w-1366) {
-        font-size: 45px;
+    .js_order {
+      @include respond-to(w-1023) {
+        display: none;
       }
     }
     .mobile_menu {
       display: none;
+      @include respond-to(w-1023) {
+        display: block;
+      }
     }
   }
   nav {
     font-family: $font-Cinzel;
     width: 80%;
     margin: -60px auto 0;
+    transition: $animation_easy;
     @include respond-to(w-1366) {
       margin: -43px auto 0;
     }
     @include respond-to(w-1279) {
       width: 60%;
     }
+    @include respond-to(w-1023) {
+      width: 100%;
+      height: 100vh;
+      background-color: $color-blue;
+      transform: translateX(100%);
+      margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 15px 45px;
+      box-sizing: border-box;
+    }
+    @include respond-to(w-639) {
+      padding: 10px 20px;
+    }
+    .mobile_logo {
+      height: 100px;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      @include respond-to(w-1023) {
+        display: flex;
+        .menu_close {
+          @include button_reset;
+          width: 35px;
+          height: 35px;
+          @include img_contain("../images/close.svg");
+        }
+      }
+    }
+    .js_order {
+      display: none;
+      @include respond-to(w-1023) {
+        display: flex;
+        margin: auto;
+      }
+    }
     ul {
       margin: 0;
       padding: 0;
       display: flex;
       justify-content: center;
+      @include respond-to(w-1023) {
+        flex-direction: column;
+        height: 80%;
+      }
       li {
         list-style-type: none;
         margin: 0 20px;
         @include respond-to(w-1279) {
           margin: 0 15px;
+        }
+        @include respond-to(w-1023) {
+          margin: 4vw 15px;
         }
         a {
           @include a_reset($color-white);
@@ -495,6 +585,9 @@ header {
           @include respond-to(w-1279) {
             font-size: 16px;
           }
+          @include respond-to(w-1023) {
+            font-size: getVW(80px);
+          }
         }
         .active {
           &:before {
@@ -510,6 +603,9 @@ header {
         }
       }
     }
+  }
+  .menu_active {
+    transform: translateY(0) !important;
   }
 }
 .section_gallary {
@@ -641,6 +737,9 @@ header {
         @include respond-to(w-1279) {
           border-top: 2px solid$color-red;
         }
+        @include respond-to(w-1023) {
+          width: 65%;
+        }
         .company {
           font-size: 90px;
           @include respond-to(w-1366) {
@@ -675,6 +774,12 @@ header {
         @include respond-to(w-1279) {
           border-top: 2px solid$color-red;
         }
+        @include respond-to(w-1023) {
+          width: 65%;
+        }
+        @include respond-to(w-799) {
+          line-height: 1.4;
+        }
         .phone {
           @include a_reset($color-red);
           margin: 0 20px;
@@ -685,12 +790,19 @@ header {
           @include respond-to(w-1279) {
             font-size: 19px;
           }
+          @include respond-to(w-1023) {
+            font-size: 21px;
+          }
         }
         .soc {
           width: 40%;
           display: flex;
           justify-content: space-between;
           margin: 2vw auto 0;
+          @include respond-to(w-1023) {
+            width: 55%;
+            margin: 5vw auto 0;
+          }
           .bn {
             i {
               color: $color-red;
@@ -743,14 +855,24 @@ header {
       @include respond-to(w-1279) {
         font-size: 16px;
       }
+      @include respond-to(w-1023) {
+        width: 80%;
+      }
       .video {
         width: 60%;
         margin: 3vw 0 0 3vw;
         border: 2px solid$color-red;
         box-shadow: $box_shadow;
+        @include respond-to(w-799) {
+          width: 100%;
+          margin: 3vw 0 0 0;
+        }
         iframe {
           width: 100%;
           height: 24vw;
+          @include respond-to(w-799) {
+            height: 50vw;
+          }
         }
       }
       .ul_vantage {
@@ -758,6 +880,9 @@ header {
         margin: 5vw auto 0;
         @include respond-to(w-1366) {
           width: 90%;
+        }
+        @include respond-to(w-1023) {
+          width: 100%;
         }
       }
     }
@@ -768,13 +893,24 @@ header {
     @include respond-to(w-1366) {
       height: 180px;
     }
+    @include respond-to(w-799) {
+      height: 100%;
+      padding: 40px 0;
+    }
     .contain {
       height: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @include respond-to(w-799) {
+        justify-content: center;
+        flex-direction: column;
+      }
     }
     .left {
+      @include respond-to(w-799) {
+        text-align: center;
+      }
       .title {
         font-weight: bold;
         font-size: 35px;
@@ -798,6 +934,18 @@ header {
           font-size: 20px;
           margin-top: 15px;
         }
+        @include respond-to(w-799) {
+          margin-top: 5px;
+        }
+      }
+    }
+    .js_order {
+      @include respond-to(w-799) {
+        margin-top: 20px;
+        width: 50%;
+      }
+      @include respond-to(w-479) {
+        width: 70%;
       }
     }
   }
@@ -1023,9 +1171,15 @@ footer {
     height: 80%;
     display: flex;
     align-items: center;
+    @include respond-to(w-799) {
+      flex-direction: column;
+    }
   }
   .left {
     width: 50%;
+    @include respond-to(w-799) {
+      width: 100%;
+    }
     .block {
       .phone {
         @include a_reset($color-white);
@@ -1082,6 +1236,9 @@ footer {
   .right {
     width: 50%;
     height: 85%;
+    @include respond-to(w-799) {
+      width: 100%;
+    }
     address {
      display: block;
       font-size: 24px;

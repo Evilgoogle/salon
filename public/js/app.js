@@ -18843,6 +18843,14 @@ $(document).ready(function () {
         $('.preloader').removeClass('preloader_active');
     }, 400);
 
+    // menu
+    $('.mobile_menu').click(function () {
+        $('nav').addClass('menu_active');
+    });
+    $('.menu_close').click(function () {
+        $('nav').removeClass('menu_active');
+    });
+
     $('.section_services .block .bn .desc').overlayScrollbars({});
     $('.page_articles .block .bn .text').overlayScrollbars({});
 
