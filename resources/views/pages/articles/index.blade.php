@@ -16,6 +16,7 @@
                             <h2 class="wow anm_fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">{{ str_limit($item->title, 90) }}</h2>
                             <div class="text wow anm_fadeInTop" data-wow-duration="1.2s" data-wow-delay="0.7s">{{ $item->desc }}</div>
                         </div>
+                        <div class="mobile_button"><span>Подробнее</span></div>
                     </a>
                 @endforeach
             </div>
