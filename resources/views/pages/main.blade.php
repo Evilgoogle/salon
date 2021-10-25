@@ -56,7 +56,7 @@
             <div class="block">
                 <p class="wow anm_fadeInDown" data-wow-duration="1.1s" data-wow-delay="0.5s">Welcome to Pleasure, home of the most passionate talent in the area. We invite you to explore our exceptional beauty services and learn more about who we are. For your convenience, we have two locations — Edgewood Station and Lindale Mall. We look forward to elevating your beauty to a new level. </p>
                 <div class="video wow anm_fadeInDown" data-wow-duration="1.1s" data-wow-delay="0.7">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fb4XPUolXek" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/QZbuj3RJcjI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <ul class="ul_vantage">
                     <li class="wow anm_fadeInTop" data-wow-duration="1s" data-wow-delay="0.3s">

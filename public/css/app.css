@@ -5125,6 +5125,10 @@ header .menu_active {
   }
 }
 
+.section_gallary .gallery-thumbs .swiper-slide-active:before {
+  opacity: 0;
+}
+
 .page_main .basic {
   height: 100vh;
 }

@@ -58,15 +58,12 @@ $(document).ready(function () {
     });
 
     // Gallary
-    var galleryThumbs = new Swiper('.gallery-thumbs', {
+    var gallery_down = new Swiper('.gallery-thumbs', {
         spaceBetween: 10,
         slidesPerView: 4,
         freeMode: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
-    });
-    galleryThumbs.on('slideChange', function (e) {
-        console.log(e);
     });
 
     var galleryTop = new Swiper('.gallery-top', {
@@ -76,7 +73,7 @@ $(document).ready(function () {
             prevEl: '.swiper-button-prev',
         },
         thumbs: {
-            swiper: galleryThumbs
+            swiper: gallery_down
         }
     });
 
